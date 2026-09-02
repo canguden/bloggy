@@ -4,7 +4,6 @@ import {
   timestamp,
   pgEnum,
   integer,
-  real,
   jsonb,
   uniqueIndex,
   index,
