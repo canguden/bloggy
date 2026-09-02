@@ -104,7 +104,7 @@ const intentFromKeywordInfo = (keyword: string): SearchIntent | null => {
   return "informational";
 };
 
-const keywordIdeaResultSchema = z.object({
+const keywordIdeaItemSchema = z.object({
   keyword: z.string(),
   keyword_info: z
     .object({
@@ -114,6 +114,13 @@ const keywordIdeaResultSchema = z.object({
     })
     .nullable()
     .optional(),
+});
+
+// dataforseo_labs endpoints wrap their actual keyword list one level deeper:
+// task.result is an array of "result objects" (usually just one) that each
+// carry pagination metadata plus the real list under `.items`.
+const keywordIdeasResultSchema = z.object({
+  items: z.array(keywordIdeaItemSchema).nullable().optional(),
 });
 
 const searchVolumeResultSchema = z.object({
@@ -155,16 +162,19 @@ export const dataForSeoProvider: SeoProvider = {
     );
 
     const ideas: KeywordIdea[] = [];
-    for (const raw of data) {
-      const parsed = keywordIdeaResultSchema.safeParse(raw);
-      if (!parsed.success) continue;
-      ideas.push({
-        keyword: parsed.data.keyword,
-        volume: parsed.data.keyword_info?.search_volume ?? null,
-        cpc: parsed.data.keyword_info?.cpc ?? null,
-        competition: parsed.data.keyword_info?.competition ?? null,
-        intent: intentFromKeywordInfo(parsed.data.keyword),
-      });
+    for (const rawResult of data) {
+      const parsedResult = keywordIdeasResultSchema.safeParse(rawResult);
+      if (!parsedResult.success) continue;
+
+      for (const item of parsedResult.data.items ?? []) {
+        ideas.push({
+          keyword: item.keyword,
+          volume: item.keyword_info?.search_volume ?? null,
+          cpc: item.keyword_info?.cpc ?? null,
+          competition: item.keyword_info?.competition ?? null,
+          intent: intentFromKeywordInfo(item.keyword),
+        });
+      }
     }
     return ideas;
   },

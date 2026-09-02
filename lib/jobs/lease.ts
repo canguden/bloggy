@@ -22,7 +22,7 @@ export async function claimJob(jobId: string, initialSteps?: JobStepRecord[]): P
     .set({
       status: "running",
       leaseExpiresAt,
-      startedAt: sql`coalesce(${jobs.startedAt}, ${now})`,
+      startedAt: sql`coalesce(${jobs.startedAt}, ${now.toISOString()}::timestamptz)`,
       attempts: sql`${jobs.attempts} + 1`,
       errorCode: null,
       errorMessage: null,

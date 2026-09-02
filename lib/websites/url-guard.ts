@@ -1,18 +1,25 @@
 import "server-only";
 import { BlockList, isIPv4 } from "node:net";
 import { lookup as dnsLookup } from "node:dns/promises";
-import { Agent, type Dispatcher } from "undici";
+import type { LookupAddress } from "node:dns";
+import * as http from "node:http";
+import * as https from "node:https";
 
 /**
  * SSRF guard for the website crawler. A crawl target is untrusted input —
  * this module is the boundary that keeps it from reaching internal/private
  * infrastructure.
  *
- * Validation happens inside the connection `lookup` hook of an undici Agent,
- * so it runs at the moment a socket is actually opened — for the initial
- * request AND every redirect hop — which is what defeats DNS rebinding
+ * Validation happens inside the `lookup` option of Node's own http/https
+ * Agent, so it runs at the moment a socket is actually opened — for the
+ * initial request AND every redirect hop (each hop gets a fresh request
+ * through the same guarded agents) — which is what defeats DNS rebinding
  * (an attacker changing the DNS answer between our check and the real
- * connect). A pre-flight-only check would not catch that.
+ * connect). A pre-flight-only check would not catch that. We use Node's core
+ * http/https modules directly (not a third-party HTTP client) so this
+ * `lookup` hook is guaranteed to be the one actually consulted — no risk of
+ * a version mismatch between an external client's connection internals and
+ * Node's own.
  */
 const blockedV4 = new BlockList();
 const V4_BLOCKED_SUBNETS: Array<[string, number]> = [
@@ -68,37 +75,40 @@ const RESPONSE_TIMEOUT_MS = 8000;
 const MAX_RESPONSE_BYTES = 5 * 1024 * 1024; // 5MB
 const ALLOWED_CONTENT_TYPES = ["text/html", "application/xhtml+xml"];
 
-/** Dispatcher whose every real connection is validated against the blocklists. */
-const guardedAgent = new Agent({
-  connectTimeout: CONNECT_TIMEOUT_MS,
-  connect: {
-    lookup(hostname, options, callback) {
-      dnsLookup(hostname, { all: true, verbatim: true })
-        .then((addresses) => {
-          const blocked = addresses.find((a) => isBlockedAddress(a.address));
-          if (blocked) {
-            callback(new BlockedAddressError(hostname, blocked.address), []);
-            return;
-          }
-          if (addresses.length === 0) {
-            callback(new Error(`Could not resolve ${hostname}`), []);
-            return;
-          }
-          // Node's net/tls connect calls this like its own dns.lookup: the
-          // caller's `options.all` decides whether it wants every address
-          // (array form) or just one (single-address form). We validate all
-          // resolved addresses either way, then answer in whichever shape
-          // was asked for.
-          if (options.all) {
-            callback(null, addresses as never);
-          } else {
-            callback(null, addresses[0].address, addresses[0].family);
-          }
-        })
-        .catch((err) => callback(err, []));
-    },
-  },
-});
+type NodeLookupCallback = (
+  err: NodeJS.ErrnoException | null,
+  address: string | LookupAddress[],
+  family?: number,
+) => void;
+
+/** Shared by both agents below — resolves via Node's own DNS, validates every candidate address, then answers Node's own connect logic in whichever shape it asked for. */
+function guardedLookup(
+  hostname: string,
+  options: { all?: boolean },
+  callback: NodeLookupCallback,
+): void {
+  dnsLookup(hostname, { all: true, verbatim: true })
+    .then((addresses) => {
+      const blocked = addresses.find((a) => isBlockedAddress(a.address));
+      if (blocked) {
+        callback(new BlockedAddressError(hostname, blocked.address), []);
+        return;
+      }
+      if (addresses.length === 0) {
+        callback(new Error(`Could not resolve ${hostname}`), []);
+        return;
+      }
+      if (options.all) {
+        callback(null, addresses);
+      } else {
+        callback(null, addresses[0].address, addresses[0].family);
+      }
+    })
+    .catch((err) => callback(err, []));
+}
+
+const guardedHttpAgent = new http.Agent({ lookup: guardedLookup as never, timeout: CONNECT_TIMEOUT_MS });
+const guardedHttpsAgent = new https.Agent({ lookup: guardedLookup as never, timeout: CONNECT_TIMEOUT_MS });
 
 export class UnsafeUrlError extends Error {}
 export class FetchTooLargeError extends Error {}
@@ -121,6 +131,52 @@ export function assertSafeUrlShape(rawUrl: string): URL {
   return url;
 }
 
+type RawResponse = { statusCode: number; headers: http.IncomingHttpHeaders; body: Buffer };
+
+function requestOnce(url: URL): Promise<RawResponse> {
+  const client = url.protocol === "https:" ? https : http;
+  const agent = url.protocol === "https:" ? guardedHttpsAgent : guardedHttpAgent;
+
+  return new Promise((resolve, reject) => {
+    const req = client.request(
+      url,
+      {
+        agent,
+        method: "GET",
+        headers: { "user-agent": "BloggyBot/1.0 (+https://bloggy.so/bot)" },
+        timeout: RESPONSE_TIMEOUT_MS,
+      },
+      (res) => {
+        const chunks: Buffer[] = [];
+        let total = 0;
+        let rejected = false;
+
+        res.on("data", (chunk: Buffer) => {
+          total += chunk.length;
+          if (total > MAX_RESPONSE_BYTES) {
+            rejected = true;
+            res.destroy();
+            reject(new FetchTooLargeError("Response exceeds the size limit"));
+            return;
+          }
+          chunks.push(chunk);
+        });
+        res.on("end", () => {
+          if (rejected) return;
+          resolve({ statusCode: res.statusCode ?? 0, headers: res.headers, body: Buffer.concat(chunks) });
+        });
+        res.on("error", (err) => {
+          if (!rejected) reject(err);
+        });
+      },
+    );
+
+    req.on("timeout", () => req.destroy(new Error("Request timed out")));
+    req.on("error", reject);
+    req.end();
+  });
+}
+
 /**
  * Fetches a URL with SSRF protections, a manual bounded redirect loop (each
  * hop re-validated and re-resolved), a response size cap, and a content-type
@@ -134,62 +190,26 @@ export async function safeFetchHtml(
   let currentUrl = assertSafeUrlShape(rawUrl);
 
   for (let redirects = 0; redirects <= MAX_REDIRECTS; redirects++) {
-    const response = await fetch(currentUrl, {
-      redirect: "manual",
-      signal: AbortSignal.timeout(RESPONSE_TIMEOUT_MS),
-      headers: { "user-agent": "BloggyBot/1.0 (+https://bloggy.so/bot)" },
-      // @ts-expect-error -- Node's fetch accepts a `dispatcher` option that isn't in the DOM lib types.
-      dispatcher: guardedAgent as Dispatcher,
-    });
+    const response = await requestOnce(currentUrl);
 
-    if (response.status >= 300 && response.status < 400) {
-      const location = response.headers.get("location");
-      response.body?.cancel();
+    if (response.statusCode >= 300 && response.statusCode < 400) {
+      const location = response.headers.location;
       if (!location) throw new UnsafeUrlError("Redirect with no Location header");
       currentUrl = assertSafeUrlShape(new URL(location, currentUrl).toString());
       continue;
     }
 
-    if (!response.ok) {
-      response.body?.cancel();
-      throw new UnsafeUrlError(`Request failed with status ${response.status}`);
+    if (response.statusCode < 200 || response.statusCode >= 300) {
+      throw new UnsafeUrlError(`Request failed with status ${response.statusCode}`);
     }
 
-    const contentType = response.headers.get("content-type") ?? "";
+    const contentType = response.headers["content-type"] ?? "";
     if (!allowedContentTypes.some((allowed) => contentType.includes(allowed))) {
-      response.body?.cancel();
       throw new UnsupportedContentTypeError(`Unsupported content-type: ${contentType}`);
     }
 
-    const contentLength = Number(response.headers.get("content-length") ?? 0);
-    if (contentLength > MAX_RESPONSE_BYTES) {
-      response.body?.cancel();
-      throw new FetchTooLargeError("Response exceeds the size limit");
-    }
-
-    const html = await readBodyWithCap(response);
-    return { finalUrl: currentUrl.toString(), html };
+    return { finalUrl: currentUrl.toString(), html: response.body.toString("utf-8") };
   }
 
   throw new UnsafeUrlError("Too many redirects");
-}
-
-async function readBodyWithCap(response: Response): Promise<string> {
-  if (!response.body) return "";
-  const reader = response.body.getReader();
-  const chunks: Uint8Array[] = [];
-  let total = 0;
-
-  while (true) {
-    const { done, value } = await reader.read();
-    if (done) break;
-    total += value.byteLength;
-    if (total > MAX_RESPONSE_BYTES) {
-      await reader.cancel();
-      throw new FetchTooLargeError("Response exceeds the size limit");
-    }
-    chunks.push(value);
-  }
-
-  return Buffer.concat(chunks).toString("utf-8");
 }

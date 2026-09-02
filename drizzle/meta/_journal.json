@@ -15,6 +15,13 @@
       "when": 1788390137231,
       "tag": "0001_skinny_raider",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1788391909103,
+      "tag": "0002_stiff_frank_castle",
+      "breakpoints": true
     }
   ]
 }
