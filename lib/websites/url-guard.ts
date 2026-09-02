@@ -55,7 +55,7 @@ function extractIpv4Mapped(address: string): string | null {
   return match ? match[1] : null;
 }
 
-function isBlockedAddress(address: string): boolean {
+export function isBlockedAddress(address: string): boolean {
   const mapped = extractIpv4Mapped(address);
   if (mapped) return blockedV4.check(mapped, "ipv4");
   if (isIPv4(address)) return blockedV4.check(address, "ipv4");

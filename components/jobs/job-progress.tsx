@@ -9,11 +9,12 @@ type JobPayload = {
   status: "queued" | "running" | "succeeded" | "failed" | "cancelled";
   steps: JobStepRecord[];
   errorMessage: string | null;
+  articleId?: string;
 };
 
 const POLL_INTERVAL_MS = 2000;
 
-export function JobProgress({ jobId }: { jobId: string }) {
+export function JobProgress({ jobId, onSucceeded }: { jobId: string; onSucceeded?: (job: JobPayload) => void }) {
   const router = useRouter();
   const [job, setJob] = useState<JobPayload | null>(null);
 
@@ -28,7 +29,12 @@ export function JobProgress({ jobId }: { jobId: string }) {
         if (cancelled) return;
         setJob(data);
 
-        if (data.status === "succeeded" || data.status === "failed") {
+        if (data.status === "succeeded") {
+          onSucceeded?.(data);
+          router.refresh();
+          return;
+        }
+        if (data.status === "failed") {
           router.refresh();
           return;
         }
@@ -43,6 +49,7 @@ export function JobProgress({ jobId }: { jobId: string }) {
       cancelled = true;
       clearTimeout(timer);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- onSucceeded is expected to be stable per mount
   }, [jobId, router]);
 
   if (!job) {
