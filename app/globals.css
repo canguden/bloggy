@@ -16,10 +16,12 @@
   --paper-inset: #f5f5f5;
   --paper-overlay: #ffffff;
 
-  /* text */
+  /* text — ink-2/ink-3 are deliberately close to ink: dark, readable
+     secondary/muted text, not the washed-out pale gray that reads as
+     disabled or low-effort. */
   --ink: #0a0a0a;
-  --ink-2: #525252;
-  --ink-3: #a3a3a3;
+  --ink-2: #262626;
+  --ink-3: #6b6b6b;
   --ink-inv: #ffffff;
 
   /* line */
@@ -106,8 +108,8 @@
     --paper-overlay: #161616;
 
     --ink: #f5f5f5;
-    --ink-2: #a3a3a3;
-    --ink-3: #6b6b6b;
+    --ink-2: #d4d4d4;
+    --ink-3: #999999;
     --ink-inv: #0a0a0a;
 
     --line: #232323;
@@ -142,8 +144,8 @@
   --paper-inset: #1c1c1c;
   --paper-overlay: #161616;
   --ink: #f5f5f5;
-  --ink-2: #a3a3a3;
-  --ink-3: #6b6b6b;
+  --ink-2: #d4d4d4;
+  --ink-3: #999999;
   --ink-inv: #0a0a0a;
   --line: #232323;
   --line-2: #333333;

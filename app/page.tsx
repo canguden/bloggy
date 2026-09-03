@@ -144,8 +144,19 @@ export default async function LandingPage() {
         </section>
       </main>
 
-      <footer className="border-t border-line px-6 py-6 text-[12.5px] text-ink-3 sm:px-10">
-        © {new Date().getFullYear()} Bloggy
+      <footer className="border-t border-line py-8">
+        <div className="mx-auto flex max-w-3xl flex-col items-center gap-4 px-6 sm:flex-row sm:justify-between sm:px-10">
+          <span className="text-[14px] font-bold tracking-[-0.02em] text-ink">Bloggy</span>
+          <nav className="flex items-center gap-6">
+            <Link href="/login" className="text-[13px] font-medium text-ink-2 hover:text-ink">
+              Sign in
+            </Link>
+            <Link href="/signup" className="text-[13px] font-medium text-ink-2 hover:text-ink">
+              Sign up
+            </Link>
+          </nav>
+          <span className="mono text-[12px] text-ink-3">© {new Date().getFullYear()} Bloggy</span>
+        </div>
       </footer>
     </div>
   );
