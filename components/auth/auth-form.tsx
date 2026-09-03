@@ -6,6 +6,8 @@ import { FiEye, FiEyeOff } from "react-icons/fi";
 import { Field, Input } from "@/components/ui/field";
 import { Button } from "@/components/ui/button";
 import { signIn, signUp } from "@/lib/auth/auth-client";
+import { addWebsiteAction } from "@/lib/websites/website-actions";
+import { PENDING_URL_KEY } from "@/lib/onboarding/pending-url";
 
 export function AuthForm({ mode }: { mode: "login" | "signup" }) {
   const router = useRouter();
@@ -26,11 +28,37 @@ export function AuthForm({ mode }: { mode: "login" | "signup" }) {
         ? await signUp.email({ name, email, password })
         : await signIn.email({ email, password });
 
-    setSubmitting(false);
-
     if (result.error) {
+      setSubmitting(false);
       setError(result.error.message ?? "Something went wrong. Please try again.");
       return;
+    }
+
+    // A URL entered on the landing page before signing up rides along in
+    // sessionStorage — pick it up now and jump straight into analysis
+    // instead of asking the user to type it again.
+    let pendingUrl: string | null = null;
+    try {
+      pendingUrl = sessionStorage.getItem(PENDING_URL_KEY);
+      if (pendingUrl) sessionStorage.removeItem(PENDING_URL_KEY);
+    } catch {
+      // sessionStorage unavailable — fall through to the normal destination
+    }
+
+    if (pendingUrl) {
+      const formData = new FormData();
+      formData.set("url", pendingUrl);
+      const websiteResult = await addWebsiteAction(undefined, formData);
+      setSubmitting(false);
+      if (websiteResult.success) {
+        router.push(`/onboarding?websiteId=${websiteResult.websiteId}&jobId=${websiteResult.jobId}`);
+        router.refresh();
+        return;
+      }
+      // Already have this site, or something else went wrong — don't block
+      // sign-in over it, just land on the normal destination.
+    } else {
+      setSubmitting(false);
     }
 
     router.push(mode === "signup" ? "/onboarding" : "/app");

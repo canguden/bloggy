@@ -12,15 +12,17 @@ import { OnboardingReview } from "./onboarding-review";
 
 type Step = 1 | 2 | 3;
 
-export function OnboardingFlow() {
+type InitialState = { websiteId: string; jobId: string; domain: string } | null;
+
+export function OnboardingFlow({ initial = null }: { initial?: InitialState }) {
   const router = useRouter();
   const { show } = useToast();
-  const [step, setStep] = useState<Step>(1);
-  const [url, setUrl] = useState("");
+  const [step, setStep] = useState<Step>(initial ? 2 : 1);
+  const [url, setUrl] = useState(initial?.domain ?? "");
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const [websiteId, setWebsiteId] = useState<string | null>(null);
-  const [jobId, setJobId] = useState<string | null>(null);
+  const [websiteId, setWebsiteId] = useState<string | null>(initial?.websiteId ?? null);
+  const [jobId, setJobId] = useState<string | null>(initial?.jobId ?? null);
 
   const domain = useMemo(() => {
     if (!url.trim()) return null;

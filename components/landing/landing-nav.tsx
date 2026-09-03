@@ -18,7 +18,11 @@ export function LandingNav({ hasSession }: { hasSession: boolean }) {
   }, []);
 
   return (
-    <div className="sticky top-4 z-20 mx-auto w-full max-w-3xl px-6 sm:px-10">
+    <div
+      className={`sticky top-4 z-20 mx-auto w-full px-6 transition-[max-width] duration-300 ease-[var(--ease)] sm:px-10 ${
+        scrolled ? "max-w-3xl" : "max-w-5xl"
+      }`}
+    >
       <nav
         className={`flex items-center justify-between rounded-full border border-line bg-paper/90 px-4 py-2.5 backdrop-blur-md transition-shadow duration-[var(--dur-transform)] ${
           scrolled ? "shadow-md" : ""

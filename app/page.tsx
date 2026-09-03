@@ -7,7 +7,6 @@ import {
   FiGlobe,
   FiTarget,
   FiEdit3,
-  FiArrowUpRight,
   FiPlus,
   FiRefreshCw,
   FiTrendingUp,
@@ -16,6 +15,7 @@ import { getSession } from "@/lib/auth/session";
 import { Button } from "@/components/ui/button";
 import { ProgressBar } from "@/components/ui/progress-bar";
 import { LandingNav } from "@/components/landing/landing-nav";
+import { HeroUrlForm } from "@/components/landing/hero-url-form";
 
 export default async function LandingPage() {
   const session = await getSession();
@@ -43,14 +43,8 @@ export default async function LandingPage() {
               search demand, and tells you exactly what to write next.
             </p>
 
-            <div className="mt-8 flex items-center gap-4">
-              <Link href={hasSession ? "/app" : "/signup"}>
-                <Button size="lg" className="hover-ring" iconRight={<FiArrowUpRight size={16} />}>
-                  {hasSession ? "Go to dashboard" : "Analyze your website"}
-                </Button>
-              </Link>
-              {!hasSession && <span className="text-[13px] text-ink-3">No credit card</span>}
-            </div>
+            <HeroUrlForm hasSession={hasSession} />
+            {!hasSession && <p className="mt-2 text-[12.5px] text-ink-3">No credit card — just your URL.</p>}
 
             <div className="mt-8 flex flex-wrap gap-2">
               <CredChip icon={<FiDatabase size={12} />} label="Live DataForSEO data" />
