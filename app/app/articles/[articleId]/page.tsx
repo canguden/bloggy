@@ -1,5 +1,7 @@
 import { eq } from "drizzle-orm";
+import { notFound } from "next/navigation";
 import { requireOrg } from "@/lib/auth/session";
+import { NotFoundError } from "@/lib/errors";
 import { getArticleForOrg, listArticleVersions } from "@/lib/content/article-queries";
 import { getWebsiteForOrg } from "@/lib/websites/website-queries";
 import { db } from "@/lib/db/client";
@@ -10,7 +12,10 @@ export default async function ArticleDetailPage({ params }: { params: Promise<{ 
   const { articleId } = await params;
   const { organizationId } = await requireOrg();
 
-  const article = await getArticleForOrg(organizationId, articleId);
+  const article = await getArticleForOrg(organizationId, articleId).catch((err) => {
+    if (err instanceof NotFoundError) notFound();
+    throw err;
+  });
   const [versions, website] = await Promise.all([
     listArticleVersions(articleId),
     getWebsiteForOrg(organizationId, article.websiteId),

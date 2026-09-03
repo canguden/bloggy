@@ -1,6 +1,8 @@
 import Link from "next/link";
+import { notFound } from "next/navigation";
 import { FiAlertCircle, FiTarget, FiChevronRight, FiTrash2 } from "react-icons/fi";
 import { requireOrg } from "@/lib/auth/session";
+import { NotFoundError } from "@/lib/errors";
 import { getWebsiteForOrg } from "@/lib/websites/website-queries";
 import { listRecentJobsForWebsite } from "@/lib/jobs/job-queries";
 import { getCurrentBusinessContext } from "@/lib/business-context/get-business-context";
@@ -26,7 +28,10 @@ export default async function WebsiteDetailPage({
   const { websiteId } = await params;
   const { organizationId } = await requireOrg();
 
-  const website = await getWebsiteForOrg(organizationId, websiteId);
+  const website = await getWebsiteForOrg(organizationId, websiteId).catch((err) => {
+    if (err instanceof NotFoundError) notFound();
+    throw err;
+  });
   const jobs = await listRecentJobsForWebsite(organizationId, websiteId);
   const latestAnalysis = jobs.find((j) => j.kind === "analyze_website");
   const latestResearch = jobs.find((j) => j.kind === "research_keywords");
