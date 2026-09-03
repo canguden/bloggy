@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 
 /**
@@ -23,6 +23,17 @@ export function Modal({
   labelledBy?: string;
 }) {
   const ref = useRef<HTMLDialogElement>(null);
+  // The portal target only exists client-side. Rendering it straight off a
+  // `typeof document` check would match on the client's first render too
+  // (document already exists by then) but not on the server's HTML, which
+  // is a hydration mismatch — so gate on a state flip that happens strictly
+  // after mount instead.
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- one-time mount flag to unlock the portal, not a render loop
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
     const dialog = ref.current;
@@ -31,7 +42,7 @@ export function Modal({
     if (!open && dialog.open) dialog.close();
   }, [open]);
 
-  if (typeof document === "undefined") return null;
+  if (!mounted) return null;
 
   return createPortal(
     <dialog
