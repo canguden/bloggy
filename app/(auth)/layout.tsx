@@ -1,12 +1,13 @@
 import Link from "next/link";
 import { FiTarget } from "react-icons/fi";
+import { Logo } from "@/components/ui/logo";
 
 export default function AuthLayout({ children }: { children: React.ReactNode }) {
   return (
     <div className="flex min-h-screen">
       <div className="hidden w-[42%] shrink-0 flex-col justify-between bg-ink p-10 text-ink-inv lg:flex">
-        <Link href="/" className="text-[15px] font-bold tracking-[-0.02em]">
-          Bloggy
+        <Link href="/">
+          <Logo onInk />
         </Link>
         <div className="max-w-sm">
           <p className="text-display-l font-bold leading-[1.05] tracking-[-0.03em]">
@@ -28,8 +29,8 @@ export default function AuthLayout({ children }: { children: React.ReactNode }) 
 
       <div className="flex flex-1 flex-col items-center justify-center px-6 py-16">
         <div className="w-full max-w-sm">
-          <Link href="/" className="mb-8 flex items-center gap-2 text-[15px] font-bold tracking-[-0.02em] text-ink lg:hidden">
-            Bloggy
+          <Link href="/" className="mb-8 flex items-center gap-2 text-ink lg:hidden">
+            <Logo />
           </Link>
           {children}
         </div>

@@ -16,6 +16,7 @@ import { Button } from "@/components/ui/button";
 import { ProgressBar } from "@/components/ui/progress-bar";
 import { LandingNav } from "@/components/landing/landing-nav";
 import { HeroUrlForm } from "@/components/landing/hero-url-form";
+import { Logo } from "@/components/ui/logo";
 
 export default async function LandingPage() {
   const session = await getSession();
@@ -146,7 +147,7 @@ export default async function LandingPage() {
 
       <footer className="border-t border-line py-8">
         <div className="mx-auto flex max-w-3xl flex-col items-center gap-4 px-6 sm:flex-row sm:justify-between sm:px-10">
-          <span className="text-[14px] font-bold tracking-[-0.02em] text-ink">Bloggy</span>
+          <Logo size={18} className="text-ink" />
           <nav className="flex items-center gap-6">
             <Link href="/login" className="text-[13px] font-medium text-ink-2 hover:text-ink">
               Sign in

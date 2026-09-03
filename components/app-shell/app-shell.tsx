@@ -6,6 +6,7 @@ import { FiMenu, FiX } from "react-icons/fi";
 import { NavLinks } from "./nav-links";
 import { UserMenu } from "./user-menu";
 import { SiteSwitcher } from "./site-switcher";
+import { Logo } from "@/components/ui/logo";
 import type { websites as websitesTable } from "@/lib/db/schema";
 
 type Website = typeof websitesTable.$inferSelect;
@@ -27,11 +28,8 @@ export function AppShell({
     <div className="flex min-h-full flex-col md:flex-row">
       <aside className="hidden w-64 shrink-0 flex-col border-r border-line bg-paper-raised md:flex">
         <div className="flex h-14 items-center px-5">
-          <Link href="/app" className="flex items-center gap-2">
-            <span className="flex h-6 w-6 items-center justify-center rounded-[7px] bg-action text-[13px] font-bold text-action-ink">
-              B
-            </span>
-            <span className="text-[15px] font-semibold tracking-tight text-ink">Bloggy</span>
+          <Link href="/app" className="text-ink">
+            <Logo size={20} />
           </Link>
         </div>
 
@@ -58,10 +56,8 @@ export function AppShell({
           >
             <FiMenu size={18} />
           </button>
-          <Link href="/app" className="flex items-center gap-2">
-            <span className="flex h-6 w-6 items-center justify-center rounded-[7px] bg-action text-[13px] font-bold text-action-ink">
-              B
-            </span>
+          <Link href="/app" className="text-ink">
+            <Logo size={18} />
           </Link>
           <UserMenu name={userName} email={userEmail} compact />
         </header>
@@ -74,7 +70,9 @@ export function AppShell({
           <div className="absolute inset-0 bg-ink/40" onClick={() => setMobileNavOpen(false)} />
           <div className="absolute inset-y-0 left-0 flex w-72 flex-col bg-paper-raised shadow-md">
             <div className="flex h-14 items-center justify-between px-5">
-              <span className="text-[15px] font-semibold text-ink">Bloggy</span>
+              <span className="text-ink">
+                <Logo size={18} />
+              </span>
               <button
                 type="button"
                 onClick={() => setMobileNavOpen(false)}

@@ -16,12 +16,12 @@
   --paper-inset: #f5f5f5;
   --paper-overlay: #ffffff;
 
-  /* text — ink-2/ink-3 are deliberately close to ink: dark, readable
-     secondary/muted text, not the washed-out pale gray that reads as
-     disabled or low-effort. */
+  /* text — ink-2 is black, same as ink: secondary copy reads as full-strength
+     text, not gray. ink-3 stays the only muted tone, reserved for genuinely
+     decorative/tertiary bits (timestamps, placeholders, disabled icons). */
   --ink: #0a0a0a;
-  --ink-2: #262626;
-  --ink-3: #6b6b6b;
+  --ink-2: #0a0a0a;
+  --ink-3: #525252;
   --ink-inv: #ffffff;
 
   /* line */
@@ -96,6 +96,14 @@
   --dur-color: 120ms;
   --dur-transform: 180ms;
   --dur-overlay: 240ms;
+
+  /* logo.svg is drawn dark-on-transparent. --logo-filter inverts it for the
+     page background (paper); --logo-filter-on-ink is the mirror image, for
+     placing the same mark on an --ink-colored surface (e.g. the auth
+     panel) — ink and paper swap meaning between themes, so this can't
+     just be "the opposite of --logo-filter" hardcoded, it has to track. */
+  --logo-filter: none;
+  --logo-filter-on-ink: invert(1);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -108,8 +116,8 @@
     --paper-overlay: #161616;
 
     --ink: #f5f5f5;
-    --ink-2: #d4d4d4;
-    --ink-3: #999999;
+    --ink-2: #f5f5f5;
+    --ink-3: #a3a3a3;
     --ink-inv: #0a0a0a;
 
     --line: #232323;
@@ -133,6 +141,8 @@
 
     --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
     --shadow-md: 0 16px 40px rgba(0, 0, 0, 0.5);
+    --logo-filter: invert(1);
+    --logo-filter-on-ink: none;
   }
 }
 
@@ -144,8 +154,8 @@
   --paper-inset: #1c1c1c;
   --paper-overlay: #161616;
   --ink: #f5f5f5;
-  --ink-2: #d4d4d4;
-  --ink-3: #999999;
+  --ink-2: #f5f5f5;
+  --ink-3: #a3a3a3;
   --ink-inv: #0a0a0a;
   --line: #232323;
   --line-2: #333333;
@@ -164,6 +174,8 @@
   --bad-weak: #2c1414;
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
   --shadow-md: 0 16px 40px rgba(0, 0, 0, 0.5);
+  --logo-filter: invert(1);
+  --logo-filter-on-ink: none;
 }
 
 @theme inline {
@@ -271,6 +283,14 @@ body {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--ink-3);
+}
+
+/* logo.svg is drawn dark-on-transparent — inverted for dark surfaces so it stays visible in both themes. */
+.logo-mark {
+  filter: var(--logo-filter);
+}
+.logo-mark-on-ink {
+  filter: var(--logo-filter-on-ink);
 }
 
 /* Hover border gradient — a soft conic sweep on the primary CTA's ring on hover. CSS only. */

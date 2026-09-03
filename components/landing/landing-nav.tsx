@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { Logo } from "@/components/ui/logo";
 
 /** Floating pill nav, inset from the viewport edges — detaches and picks up a shadow on scroll. */
 export function LandingNav({ hasSession }: { hasSession: boolean }) {
@@ -28,8 +29,8 @@ export function LandingNav({ hasSession }: { hasSession: boolean }) {
           scrolled ? "shadow-md" : ""
         }`}
       >
-        <Link href="/" className="text-[14px] font-bold tracking-[-0.02em] text-ink">
-          Bloggy
+        <Link href="/" className="text-ink">
+          <Logo size={18} />
         </Link>
         <div className="hidden items-center gap-6 sm:flex">
           <a href="#loop" className="text-[13px] font-medium text-ink-2 hover:text-ink">
