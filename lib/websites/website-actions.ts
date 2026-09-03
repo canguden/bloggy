@@ -13,7 +13,7 @@ import { getWebsiteForOrg } from "./website-queries";
 import { ValidationError, toUserMessage } from "@/lib/errors";
 
 export type AddWebsiteResult =
-  | { success: true; websiteId: string }
+  | { success: true; websiteId: string; jobId: string }
   | { success: false; error: string };
 
 export async function addWebsiteAction(_prev: unknown, formData: FormData): Promise<AddWebsiteResult> {
@@ -36,10 +36,10 @@ export async function addWebsiteAction(_prev: unknown, formData: FormData): Prom
     const websiteId = createId("web");
     await db.insert(websites).values({ id: websiteId, organizationId, url, domain });
 
-    await enqueueJob({ organizationId, websiteId, kind: "analyze_website" });
+    const jobId = await enqueueJob({ organizationId, websiteId, kind: "analyze_website" });
 
     revalidatePath("/app/websites");
-    return { success: true, websiteId };
+    return { success: true, websiteId, jobId };
   } catch (err) {
     return { success: false, error: toUserMessage(err) };
   }

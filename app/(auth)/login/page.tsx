@@ -6,14 +6,12 @@ export const metadata = { title: "Sign in — Bloggy" };
 export default function LoginPage() {
   return (
     <>
-      <h1 className="mb-1 text-[var(--text-xl)] font-semibold text-[var(--text-primary)]">Welcome back</h1>
-      <p className="mb-6 text-[var(--text-sm)] text-[var(--text-secondary)]">
-        Sign in to your workspace.
-      </p>
+      <h1 className="text-display-l font-bold tracking-[-0.03em] text-ink">Welcome back</h1>
+      <p className="mt-1.5 mb-7 text-[13.5px] text-ink-2">Sign in to your workspace.</p>
       <AuthForm mode="login" />
-      <p className="mt-6 text-center text-[var(--text-sm)] text-[var(--text-secondary)]">
+      <p className="mt-6 text-center text-[13.5px] text-ink-3">
         New to Bloggy?{" "}
-        <Link href="/signup" className="font-medium text-[var(--accent)] hover:underline">
+        <Link href="/signup" className="font-medium text-accent-ink hover:underline">
           Create an account
         </Link>
       </p>
