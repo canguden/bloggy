@@ -9,6 +9,8 @@ import {
   FiEdit3,
   FiArrowUpRight,
   FiPlus,
+  FiRefreshCw,
+  FiTrendingUp,
 } from "react-icons/fi";
 import { getSession } from "@/lib/auth/session";
 import { Button } from "@/components/ui/button";
@@ -57,7 +59,7 @@ export default async function LandingPage() {
             </div>
           </div>
 
-          <div className="mx-auto mt-16 w-full max-w-4xl px-6 sm:px-10">
+          <div className="mx-auto mt-16 w-full max-w-3xl px-6 sm:px-10">
             <div className="overflow-hidden rounded-2xl border border-line shadow-md">
               <ProductPreview />
             </div>
@@ -68,7 +70,12 @@ export default async function LandingPage() {
           <div className="mx-auto max-w-3xl px-6 sm:px-10">
             <p className="eyebrow mb-4 text-ink-3">The loop</p>
             <h2 className="mb-10 max-w-lg text-display-l font-bold leading-[1.05] tracking-[-0.03em] text-ink">
-              One loop, <span className="text-ink-3">running on its own.</span>
+              One loop,{" "}
+              <span className="inline-flex items-center gap-1.5 rounded-full bg-accent-weak px-3 py-1 align-middle text-[0.5em] font-semibold text-accent-ink">
+                <FiRefreshCw size="0.85em" />
+                automatic
+              </span>
+              .
             </h2>
             <div className="grid grid-cols-1 gap-8 sm:grid-cols-4">
               <LoopStep icon={<FiGlobe size={16} />} number="01" title="Reads your site" description="Crawls what you publish and pulls out what your business actually does." />
@@ -109,7 +116,7 @@ export default async function LandingPage() {
         </section>
 
         <section className="border-t border-line py-20">
-          <div className="mx-auto max-w-2xl px-6 sm:px-10">
+          <div className="mx-auto max-w-3xl px-6 sm:px-10">
             <p className="eyebrow mb-4 text-ink-3">Questions</p>
             <h2 className="mb-10 text-display-l font-bold leading-[1.05] tracking-[-0.03em] text-ink">
               Worth <span className="text-ink-3">asking.</span>
@@ -127,7 +134,12 @@ export default async function LandingPage() {
         <section className="border-t border-line bg-ink py-20 text-ink-inv">
           <div className="mx-auto flex max-w-3xl flex-col items-start px-6 sm:px-10">
             <h2 className="text-display-l font-bold leading-[1.05] tracking-[-0.03em]">
-              Find out what to write <span className="text-white/50">next.</span>
+              Find out what{" "}
+              <span className="inline-flex items-center gap-1.5 rounded-full bg-white/10 px-3 py-1 align-middle text-[0.5em] font-semibold text-white">
+                <FiTrendingUp size="0.85em" />
+                ranks
+              </span>{" "}
+              next.
             </h2>
             <Link href={hasSession ? "/app" : "/signup"} className="mt-7">
               <Button variant="secondary" size="lg" className="border-white/25 bg-transparent text-ink-inv hover:bg-white/10">
