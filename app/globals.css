@@ -271,13 +271,6 @@ body {
   color: var(--ink-3);
 }
 
-/* Subtle dot-grid texture — landing hero only, never elsewhere. */
-.dot-grid {
-  background-image: radial-gradient(var(--line-2) 1px, transparent 1px);
-  background-size: 24px 24px;
-  mask-image: radial-gradient(ellipse 60% 50% at 50% 0%, black 40%, transparent 80%);
-}
-
 /* Hover border gradient — a soft conic sweep on the primary CTA's ring on hover. CSS only. */
 .hover-ring {
   position: relative;

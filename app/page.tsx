@@ -24,7 +24,7 @@ export default async function LandingPage() {
       <LandingNav hasSession={hasSession} />
 
       <main className="flex flex-1 flex-col">
-        <section className="dot-grid relative overflow-hidden pt-32 pb-20 sm:pt-40">
+        <section className="pt-32 pb-20 sm:pt-40">
           <div className="mx-auto flex w-full max-w-3xl flex-col items-start px-6 sm:px-10">
             <h1 className="display max-w-2xl text-display-xl">
               Your customers are already{" "}
@@ -66,7 +66,10 @@ export default async function LandingPage() {
 
         <section className="border-t border-line py-20">
           <div className="mx-auto max-w-3xl px-6 sm:px-10">
-            <p className="eyebrow mb-8 text-ink-3">The loop</p>
+            <p className="eyebrow mb-4 text-ink-3">The loop</p>
+            <h2 className="mb-10 max-w-lg text-display-l font-bold leading-[1.05] tracking-[-0.03em] text-ink">
+              One loop, <span className="text-ink-3">running on its own.</span>
+            </h2>
             <div className="grid grid-cols-1 gap-8 sm:grid-cols-4">
               <LoopStep icon={<FiGlobe size={16} />} number="01" title="Reads your site" description="Crawls what you publish and pulls out what your business actually does." />
               <LoopStep icon={<FiSearch size={16} />} number="02" title="Researches the SERP" description="Real keyword volume, difficulty, and competitor coverage — not guesses." />
@@ -107,7 +110,10 @@ export default async function LandingPage() {
 
         <section className="border-t border-line py-20">
           <div className="mx-auto max-w-2xl px-6 sm:px-10">
-            <p className="eyebrow mb-6 text-ink-3">Questions</p>
+            <p className="eyebrow mb-4 text-ink-3">Questions</p>
+            <h2 className="mb-10 text-display-l font-bold leading-[1.05] tracking-[-0.03em] text-ink">
+              Worth <span className="text-ink-3">asking.</span>
+            </h2>
             <div className="flex flex-col divide-y divide-line border-y border-line">
               <Faq q="Does it publish directly to my site?" a="Not yet. Bloggy writes and scores articles for you to review and mark ready — publishing integrations are next." />
               <Faq q="Where does the keyword data come from?" a="DataForSEO — real search volume, difficulty, and SERP data, refreshed on a budget you control." />
