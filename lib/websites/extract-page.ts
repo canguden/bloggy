@@ -1,4 +1,5 @@
 import { createHash } from "node:crypto";
+import * as cheerio from "cheerio";
 
 export type ExtractedPage = {
   title: string | null;
@@ -13,39 +14,28 @@ export type ExtractedPage = {
 const MAX_TEXT_CHARS = 20_000;
 
 /**
- * Minimal, dependency-free HTML extraction: strips script/style, pulls
- * title/h1/meta description, plain text, and same-origin links. This text
- * later becomes untrusted "data" fed to an LLM — it is never treated as
- * instructions (see lib/ai/prompts).
+ * Parses crawled HTML with cheerio: title/h1/meta description, plain text,
+ * and same-origin links. This text later becomes untrusted "data" fed to an
+ * LLM — it is never treated as instructions (see lib/ai/untrusted-content.ts).
  */
 export function extractPage(html: string, pageUrl: string): ExtractedPage {
-  const withoutNoise = html
-    .replace(/<script[\s\S]*?<\/script>/gi, " ")
-    .replace(/<style[\s\S]*?<\/style>/gi, " ")
-    .replace(/<!--[\s\S]*?-->/g, " ");
+  const $ = cheerio.load(html);
+  $("script, style, noscript").remove();
 
-  const title = matchOne(/<title[^>]*>([\s\S]*?)<\/title>/i, withoutNoise);
-  const h1 = matchOne(/<h1[^>]*>([\s\S]*?)<\/h1>/i, withoutNoise);
-  const metaDescription = matchOne(
-    /<meta[^>]+name=["']description["'][^>]+content=["']([^"']*)["']/i,
-    withoutNoise,
-  );
-  const robotsMeta = matchOne(/<meta[^>]+name=["']robots["'][^>]+content=["']([^"']*)["']/i, withoutNoise);
-  const isIndexable = !robotsMeta?.toLowerCase().includes("noindex");
+  const title = normalize($("title").first().text()) || null;
+  const h1 = normalize($("h1").first().text()) || null;
+  const metaDescription = normalize($('meta[name="description"]').attr("content") ?? "") || null;
+  const robotsMeta = ($('meta[name="robots"]').attr("content") ?? "").toLowerCase();
+  const isIndexable = !robotsMeta.includes("noindex");
 
-  const text = decodeEntities(withoutNoise.replace(/<[^>]+>/g, " "))
-    .replace(/\s+/g, " ")
-    .trim()
-    .slice(0, MAX_TEXT_CHARS);
-
-  const links = extractLinks(withoutNoise, pageUrl);
-
+  const text = normalize($("body").text()).slice(0, MAX_TEXT_CHARS);
+  const links = extractLinks($, pageUrl);
   const summary = (metaDescription ?? text).slice(0, 300);
   const contentHash = createHash("sha256").update(text).digest("hex");
 
   return {
-    title: title ? decodeEntities(title).trim().slice(0, 300) : null,
-    h1: h1 ? decodeEntities(stripTags(h1)).trim().slice(0, 300) : null,
+    title: title?.slice(0, 300) ?? null,
+    h1: h1?.slice(0, 300) ?? null,
     summary,
     text,
     links,
@@ -54,39 +44,27 @@ export function extractPage(html: string, pageUrl: string): ExtractedPage {
   };
 }
 
-function matchOne(pattern: RegExp, source: string): string | null {
-  return pattern.exec(source)?.[1] ?? null;
+function normalize(text: string): string {
+  return text.replace(/\s+/g, " ").trim();
 }
 
-function stripTags(source: string): string {
-  return source.replace(/<[^>]+>/g, " ");
-}
-
-function decodeEntities(source: string): string {
-  return source
-    .replace(/&amp;/g, "&")
-    .replace(/&lt;/g, "<")
-    .replace(/&gt;/g, ">")
-    .replace(/&quot;/g, '"')
-    .replace(/&#39;/g, "'")
-    .replace(/&nbsp;/g, " ");
-}
-
-function extractLinks(html: string, pageUrl: string): string[] {
+function extractLinks($: cheerio.CheerioAPI, pageUrl: string): string[] {
   const base = new URL(pageUrl);
   const found = new Set<string>();
 
-  for (const match of html.matchAll(/<a\s[^>]*href=["']([^"'#]+)["']/gi)) {
+  $("a[href]").each((_, el) => {
+    const href = $(el).attr("href");
+    if (!href) return;
     try {
-      const resolved = new URL(match[1], base);
-      if (resolved.protocol !== "http:" && resolved.protocol !== "https:") continue;
-      if (resolved.hostname !== base.hostname) continue;
+      const resolved = new URL(href, base);
+      if (resolved.protocol !== "http:" && resolved.protocol !== "https:") return;
+      if (resolved.hostname !== base.hostname) return;
       resolved.hash = "";
       found.add(resolved.toString());
     } catch {
       // ignore malformed hrefs
     }
-  }
+  });
 
   return Array.from(found);
 }

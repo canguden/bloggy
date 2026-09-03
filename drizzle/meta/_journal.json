@@ -22,6 +22,13 @@
       "when": 1788391909103,
       "tag": "0002_stiff_frank_castle",
       "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1788393962695,
+      "tag": "0003_freezing_ted_forrester",
+      "breakpoints": true
     }
   ]
 }

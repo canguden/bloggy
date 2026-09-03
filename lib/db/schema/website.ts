@@ -18,6 +18,8 @@ export const websites = pgTable(
     url: text("url").notNull(),
     domain: text("domain").notNull(),
     status: websiteStatusEnum("status").notNull().default("pending"),
+    faviconUrl: text("favicon_url"),
+    siteName: text("site_name"),
     lastAnalyzedAt: timestamp("last_analyzed_at", { withTimezone: true }),
     createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
     updatedAt: timestamp("updated_at", { withTimezone: true }).notNull().defaultNow(),

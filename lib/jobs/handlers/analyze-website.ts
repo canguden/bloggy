@@ -3,6 +3,7 @@ import { eq } from "drizzle-orm";
 import { db } from "@/lib/db/client";
 import { websites, websitePages } from "@/lib/db/schema";
 import { crawlWebsite, type CrawledPage } from "@/lib/websites/crawler";
+import { resolveSiteIdentity } from "@/lib/websites/site-identity";
 import { deriveBusinessContext } from "@/lib/ai/derive-business-context";
 import { saveDerivedBusinessContext } from "@/lib/business-context/save-business-context";
 import { recordActivity } from "@/lib/activity/record-activity";
@@ -25,7 +26,15 @@ export const analyzeWebsiteHandler: JobHandler = {
     await db.update(websites).set({ status: "analyzing" }).where(eq(websites.id, websiteId));
 
     const pages = await ctx.checkpoint("crawl", "Reading your site", async () => {
-      const crawled = await crawlWebsite(website.url);
+      const { pages: crawled, homepageHtml } = await crawlWebsite(website.url);
+
+      if (homepageHtml) {
+        const identity = await resolveSiteIdentity(website.url, homepageHtml);
+        await db
+          .update(websites)
+          .set({ faviconUrl: identity.faviconUrl, siteName: identity.siteName })
+          .where(eq(websites.id, websiteId));
+      }
 
       for (const page of crawled) {
         await db

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { FiEdit2 } from "react-icons/fi";
 import { Button } from "@/components/ui/button";
 import { Field, Input, Textarea } from "@/components/ui/field";
 import { Badge } from "@/components/ui/badge";
@@ -18,6 +19,7 @@ export function BusinessContextPanel({
   const { show } = useToast();
   const [editing, setEditing] = useState(false);
   const [submitting, setSubmitting] = useState(false);
+  const [fieldErrors, setFieldErrors] = useState<Record<string, string>>({});
   const { context, offerings, audiences } = details;
 
   async function handleSubmit(formData: FormData) {
@@ -25,10 +27,12 @@ export function BusinessContextPanel({
     const result = await updateBusinessContextAction(formData);
     setSubmitting(false);
     if (result.success) {
-      show("Business context updated", "success");
+      setFieldErrors({});
+      show("Business context updated", { variant: "success" });
       setEditing(false);
     } else {
-      show(result.error ?? "Couldn't save your changes", "error");
+      setFieldErrors(result.fieldErrors ?? {});
+      show(result.error ?? "Couldn't save your changes", { variant: "error" });
     }
   }
 
@@ -36,7 +40,7 @@ export function BusinessContextPanel({
     return (
       <form action={handleSubmit} className="flex flex-col gap-4">
         <input type="hidden" name="websiteId" value={websiteId} />
-        <Field label="What this business does">
+        <Field label="What this business does" error={fieldErrors.summary}>
           {(inputProps) => (
             <Textarea {...inputProps} name="summary" defaultValue={context.summary} rows={3} required />
           )}
@@ -72,39 +76,35 @@ export function BusinessContextPanel({
     <div className="flex flex-col gap-5">
       <div className="flex items-start justify-between gap-4">
         <div>
-          <div className="mb-1 flex items-center gap-2">
-            <h3 className="text-[var(--text-sm)] font-medium text-[var(--text-muted)]">What Bloggy understood</h3>
+          <div className="mb-1.5 flex items-center gap-2">
+            <h3 className="eyebrow text-ink-3">What Bloggy understood</h3>
             {context.source === "derived" ? (
               <Badge tone="neutral">From your website</Badge>
             ) : (
               <Badge tone="accent">Edited by you</Badge>
             )}
           </div>
-          <p className="text-[var(--text-base)] text-[var(--text-primary)]">{context.summary}</p>
+          <p className="text-[14.5px] leading-relaxed text-ink">{context.summary}</p>
         </div>
-        <Button variant="secondary" size="sm" onClick={() => setEditing(true)}>
+        <Button variant="ghost" size="sm" iconLeft={<FiEdit2 size={13} />} onClick={() => setEditing(true)}>
           Fix anything
         </Button>
       </div>
 
       {context.brandVoice && (
         <div>
-          <h4 className="mb-1 text-[var(--text-xs)] font-medium uppercase tracking-wide text-[var(--text-muted)]">
-            Brand voice
-          </h4>
-          <p className="text-[var(--text-sm)] text-[var(--text-secondary)]">{context.brandVoice}</p>
+          <h4 className="eyebrow mb-1 text-ink-3">Brand voice</h4>
+          <p className="text-[13.5px] text-ink-2">{context.brandVoice}</p>
         </div>
       )}
 
       {offerings.length > 0 && (
         <div>
-          <h4 className="mb-2 text-[var(--text-xs)] font-medium uppercase tracking-wide text-[var(--text-muted)]">
-            Offerings
-          </h4>
+          <h4 className="eyebrow mb-2 text-ink-3">Offerings</h4>
           <ul className="flex flex-col gap-1.5">
             {offerings.map((o) => (
-              <li key={o.id} className="text-[var(--text-sm)] text-[var(--text-secondary)]">
-                <span className="font-medium text-[var(--text-primary)]">{o.name}</span>
+              <li key={o.id} className="text-[13.5px] text-ink-2">
+                <span className="font-medium text-ink">{o.name}</span>
                 {o.description ? ` — ${o.description}` : ""}
               </li>
             ))}
@@ -114,9 +114,7 @@ export function BusinessContextPanel({
 
       {audiences.length > 0 && (
         <div>
-          <h4 className="mb-2 text-[var(--text-xs)] font-medium uppercase tracking-wide text-[var(--text-muted)]">
-            Target audiences
-          </h4>
+          <h4 className="eyebrow mb-2 text-ink-3">Target audiences</h4>
           <div className="flex flex-wrap gap-1.5">
             {audiences.map((a) => (
               <Badge key={a.id} tone="neutral">

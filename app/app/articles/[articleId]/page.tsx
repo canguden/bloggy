@@ -1,6 +1,7 @@
 import { eq } from "drizzle-orm";
 import { requireOrg } from "@/lib/auth/session";
 import { getArticleForOrg, listArticleVersions } from "@/lib/content/article-queries";
+import { getWebsiteForOrg } from "@/lib/websites/website-queries";
 import { db } from "@/lib/db/client";
 import { opportunities, keywords } from "@/lib/db/schema";
 import { ArticleEditor } from "@/components/articles/article-editor";
@@ -10,18 +11,29 @@ export default async function ArticleDetailPage({ params }: { params: Promise<{ 
   const { organizationId } = await requireOrg();
 
   const article = await getArticleForOrg(organizationId, articleId);
-  const versions = await listArticleVersions(articleId);
+  const [versions, website] = await Promise.all([
+    listArticleVersions(articleId),
+    getWebsiteForOrg(organizationId, article.websiteId),
+  ]);
 
-  let targetKeyword: string | null = null;
+  let targetKeyword: { keyword: string; volume: number | null } | null = null;
   if (article.opportunityId) {
     const [row] = await db
-      .select({ keyword: keywords.keyword })
+      .select({ keyword: keywords.keyword, volume: keywords.volume })
       .from(opportunities)
       .innerJoin(keywords, eq(keywords.id, opportunities.targetKeywordId))
       .where(eq(opportunities.id, article.opportunityId))
       .limit(1);
-    targetKeyword = row?.keyword ?? null;
+    targetKeyword = row ?? null;
   }
 
-  return <ArticleEditor article={article} versions={versions} targetKeyword={targetKeyword} />;
+  return (
+    <ArticleEditor
+      article={article}
+      versions={versions}
+      targetKeyword={targetKeyword}
+      domain={website.domain}
+      faviconUrl={website.faviconUrl}
+    />
+  );
 }

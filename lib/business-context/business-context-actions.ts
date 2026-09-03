@@ -36,15 +36,26 @@ function splitLines(value: string | undefined): string[] {
  * destructive. Locations/industries/etc. carry over unchanged from the prior
  * version; this form only exposes the fields most worth hand-correcting.
  */
-export async function updateBusinessContextAction(formData: FormData): Promise<{ success: boolean; error?: string }> {
+export async function updateBusinessContextAction(
+  formData: FormData,
+): Promise<{ success: boolean; error?: string; fieldErrors?: Record<string, string> }> {
   try {
     const { organizationId } = await requireOrg();
-    const parsed = updateSchema.parse({
+    const parseResult = updateSchema.safeParse({
       websiteId: formData.get("websiteId"),
       summary: formData.get("summary"),
       brandVoice: formData.get("brandVoice") || undefined,
       differentiators: formData.get("differentiators") || undefined,
     });
+    if (!parseResult.success) {
+      const fieldErrors: Record<string, string> = {};
+      for (const issue of parseResult.error.issues) {
+        const key = issue.path[0]?.toString() ?? "form";
+        if (!fieldErrors[key]) fieldErrors[key] = issue.message;
+      }
+      return { success: false, error: "Fix the highlighted fields", fieldErrors };
+    }
+    const parsed = parseResult.data;
 
     await getWebsiteForOrg(organizationId, parsed.websiteId); // authorization check
 

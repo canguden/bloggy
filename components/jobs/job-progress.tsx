@@ -2,7 +2,8 @@
 
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import { FiCheck, FiLoader, FiAlertCircle } from "react-icons/fi";
+import { FiCheck, FiAlertCircle, FiCircle } from "react-icons/fi";
+import { CgSpinner } from "react-icons/cg";
 import type { JobStepRecord } from "@/lib/jobs/types";
 
 type JobPayload = {
@@ -53,34 +54,32 @@ export function JobProgress({ jobId, onSucceeded }: { jobId: string; onSucceeded
   }, [jobId, router]);
 
   if (!job) {
-    return <p className="text-[var(--text-sm)] text-[var(--text-muted)]">Checking status…</p>;
+    return (
+      <div className="flex items-center gap-2 text-[13px] text-ink-3">
+        <CgSpinner className="animate-spin" size={14} />
+        Checking status…
+      </div>
+    );
   }
 
   return (
-    <div className="flex flex-col gap-3">
+    <div className="flex flex-col gap-3" aria-live="polite">
       {job.steps.map((step) => (
         <div key={step.name} className="flex items-center gap-3">
-          <span className="flex h-5 w-5 items-center justify-center">
-            {step.status === "succeeded" && <FiCheck className="text-[var(--success)]" size={16} />}
-            {step.status === "running" && (
-              <FiLoader className="animate-spin text-[var(--accent)]" size={16} />
-            )}
-            {step.status === "failed" && <FiAlertCircle className="text-[var(--danger)]" size={16} />}
-            {step.status === "pending" && (
-              <span className="h-2 w-2 rounded-full bg-[var(--border-strong)]" />
-            )}
+          <span className="flex h-5 w-5 shrink-0 items-center justify-center">
+            {step.status === "succeeded" && <FiCheck className="text-ok" size={16} />}
+            {step.status === "running" && <CgSpinner className="animate-spin text-accent" size={16} />}
+            {step.status === "failed" && <FiAlertCircle className="text-bad" size={16} />}
+            {step.status === "pending" && <FiCircle className="text-ink-3" size={8} />}
           </span>
-          <span
-            className={`text-[var(--text-sm)] ${
-              step.status === "pending" ? "text-[var(--text-muted)]" : "text-[var(--text-primary)]"
-            }`}
-          >
+          <span className={`text-[13.5px] ${step.status === "pending" ? "text-ink-3" : "text-ink"}`}>
             {step.label}
           </span>
         </div>
       ))}
       {job.status === "failed" && job.errorMessage && (
-        <p role="alert" className="mt-1 text-[var(--text-sm)] text-[var(--danger)]">
+        <p role="alert" className="mt-1 flex items-center gap-1.5 text-[13px] text-bad">
+          <FiAlertCircle size={13} />
           {job.errorMessage}
         </p>
       )}

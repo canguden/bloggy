@@ -1,3 +1,5 @@
+import { ProgressBar } from "@/components/ui/progress-bar";
+
 type Breakdown = {
   searchDemand: number;
   competition: number;
@@ -7,32 +9,32 @@ type Breakdown = {
 };
 
 const LABELS: Record<keyof Breakdown, string> = {
-  searchDemand: "Search demand",
-  competition: "Low competition",
-  businessRelevance: "Business relevance",
-  commercialIntent: "Commercial intent",
-  contentGap: "Content gap",
+  searchDemand: "demand",
+  competition: "competition",
+  businessRelevance: "relevance",
+  commercialIntent: "intent",
+  contentGap: "gap",
 };
+
+/** Score is a fixed color ramp — bad/warn/ok — the one deliberate accent on an otherwise mono card. */
+export function scoreTone(score: number): "bad" | "warn" | "ok" {
+  if (score < 40) return "bad";
+  if (score < 70) return "warn";
+  return "ok";
+}
 
 export function ScoreBreakdown({ breakdown }: { breakdown: Breakdown }) {
   return (
-    <dl className="flex flex-col gap-1.5">
+    <div className="grid grid-cols-1 gap-x-6 gap-y-2 sm:grid-cols-2">
       {(Object.keys(LABELS) as Array<keyof Breakdown>).map((key) => (
-        <div key={key} className="flex items-center gap-3">
-          <dt className="w-36 shrink-0 text-[var(--text-xs)] text-[var(--text-muted)]">{LABELS[key]}</dt>
-          <dd className="flex-1">
-            <div className="h-1.5 rounded-full bg-[var(--surface-sunken)]">
-              <div
-                className="h-1.5 rounded-full bg-[var(--accent)]"
-                style={{ width: `${Math.round(breakdown[key])}%` }}
-              />
-            </div>
-          </dd>
-          <span className="w-8 shrink-0 text-right text-[var(--text-xs)] text-[var(--text-muted)]">
+        <div key={key} className="flex items-center gap-2.5">
+          <span className="w-20 shrink-0 text-[11.5px] text-ink-3">{LABELS[key]}</span>
+          <ProgressBar value={breakdown[key]} />
+          <span className="mono w-7 shrink-0 text-right text-[11.5px] text-ink-2">
             {Math.round(breakdown[key])}
           </span>
         </div>
       ))}
-    </dl>
+    </div>
   );
 }

@@ -178,15 +178,15 @@ function requestOnce(url: URL): Promise<RawResponse> {
 }
 
 /**
- * Fetches a URL with SSRF protections, a manual bounded redirect loop (each
- * hop re-validated and re-resolved), a response size cap, and a content-type
- * allowlist. Returns the final response body as text.
+ * The shared SSRF-guarded fetch: a manual bounded redirect loop (each hop
+ * re-validated and re-resolved through the guarded agents above) and a
+ * response size cap. Both `safeFetchHtml` and `safeFetchBinary` build on
+ * this — neither bypasses the guard.
  */
-export async function safeFetchHtml(
+async function safeRequest(
   rawUrl: string,
-  options: { allowedContentTypes?: string[] } = {},
-): Promise<{ finalUrl: string; html: string }> {
-  const allowedContentTypes = options.allowedContentTypes ?? ALLOWED_CONTENT_TYPES;
+  allowedContentTypes: string[],
+): Promise<{ finalUrl: string; contentType: string; body: Buffer }> {
   let currentUrl = assertSafeUrlShape(rawUrl);
 
   for (let redirects = 0; redirects <= MAX_REDIRECTS; redirects++) {
@@ -208,8 +208,50 @@ export async function safeFetchHtml(
       throw new UnsupportedContentTypeError(`Unsupported content-type: ${contentType}`);
     }
 
-    return { finalUrl: currentUrl.toString(), html: response.body.toString("utf-8") };
+    return { finalUrl: currentUrl.toString(), contentType, body: response.body };
   }
 
   throw new UnsafeUrlError("Too many redirects");
+}
+
+/**
+ * Fetches a URL with SSRF protections, a manual bounded redirect loop, a
+ * response size cap, and a content-type allowlist. Returns the body as text.
+ */
+export async function safeFetchHtml(
+  rawUrl: string,
+  options: { allowedContentTypes?: string[] } = {},
+): Promise<{ finalUrl: string; html: string }> {
+  const { finalUrl, body } = await safeRequest(rawUrl, options.allowedContentTypes ?? ALLOWED_CONTENT_TYPES);
+  return { finalUrl, html: body.toString("utf-8") };
+}
+
+const DEFAULT_BINARY_CONTENT_TYPES = [
+  "image/x-icon",
+  "image/vnd.microsoft.icon",
+  "image/png",
+  "image/svg+xml",
+  "image/jpeg",
+  "image/gif",
+  "image/webp",
+];
+const MAX_BINARY_BYTES = 512 * 1024; // 512KB — generous for a favicon, not for anything else
+
+/**
+ * Same SSRF-guarded path, for binary assets (favicons). Untrusted-URL
+ * boundary: a favicon URL comes from HTML we don't control, so it must go
+ * through the identical guard as every other crawl fetch — never a plain
+ * `fetch()`.
+ */
+export async function safeFetchBinary(
+  rawUrl: string,
+  options: { allowedContentTypes?: string[]; maxBytes?: number } = {},
+): Promise<{ finalUrl: string; contentType: string; body: Buffer }> {
+  const allowedContentTypes = options.allowedContentTypes ?? DEFAULT_BINARY_CONTENT_TYPES;
+  const result = await safeRequest(rawUrl, allowedContentTypes);
+  const maxBytes = options.maxBytes ?? MAX_BINARY_BYTES;
+  if (result.body.byteLength > maxBytes) {
+    throw new FetchTooLargeError("Response exceeds the size limit");
+  }
+  return result;
 }

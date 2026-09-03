@@ -40,3 +40,15 @@ export async function dismissOpportunityAction(opportunityId: string): Promise<{
     return { success: false, error: toUserMessage(err) };
   }
 }
+
+export async function restoreOpportunityAction(opportunityId: string): Promise<{ success: boolean; error?: string }> {
+  try {
+    const { organizationId } = await requireOrg();
+    await getOpportunityForOrg(organizationId, opportunityId); // authorization check
+    await db.update(opportunities).set({ status: "new" }).where(eq(opportunities.id, opportunityId));
+    revalidatePath("/app/opportunities");
+    return { success: true };
+  } catch (err) {
+    return { success: false, error: toUserMessage(err) };
+  }
+}

@@ -1,18 +1,26 @@
 import Link from "next/link";
 import { redirect } from "next/navigation";
 import { eq, and, desc } from "drizzle-orm";
+import { FiTarget, FiChevronRight, FiGlobe, FiSearch, FiEdit3, FiCheckCircle } from "react-icons/fi";
 import { requireOrg } from "@/lib/auth/session";
 import { db } from "@/lib/db/client";
 import { opportunities, articles, websites } from "@/lib/db/schema";
 import { listWebsitesForOrg } from "@/lib/websites/website-queries";
 import { listRecentActivity } from "@/lib/activity/activity-queries";
 import { describeActivity } from "@/lib/activity/describe-activity";
-import { Card } from "@/components/ui/card";
+import { formatRelativeTime } from "@/lib/format";
 
 export const metadata = { title: "Dashboard — Bloggy" };
 
+const ACTIVITY_ICON: Record<string, React.ComponentType<{ size?: number; className?: string }>> = {
+  analyzed_website: FiGlobe,
+  found_opportunities: FiSearch,
+  generated_article: FiEdit3,
+  marked_article_ready: FiCheckCircle,
+};
+
 export default async function DashboardPage() {
-  const { organizationId } = await requireOrg();
+  const { organizationId, user } = await requireOrg();
   const sites = await listWebsitesForOrg(organizationId);
 
   if (sites.length === 0) redirect("/app/websites");
@@ -41,73 +49,99 @@ export default async function DashboardPage() {
   ]);
 
   const nextAction = openOpportunities[0] ?? null;
+  const firstName = user.name?.split(" ")[0] || "there";
+
+  const waiting = [
+    { label: "Opportunities to act on", count: openOpportunities.length, href: "/app/opportunities" },
+    { label: "Article ready to review", count: readyArticles.length, href: "/app/articles?status=ready" },
+    { label: "Articles in draft", count: draftArticles.length, href: "/app/articles?status=draft" },
+  ];
 
   return (
-    <div className="mx-auto max-w-3xl px-6 py-10">
-      <h1 className="mb-1 font-serif text-[var(--text-2xl)] font-semibold text-[var(--text-primary)]">
-        Good to see you
+    <div className="mx-auto max-w-2xl px-6 py-10 sm:px-8">
+      <h1 className="text-display-l font-bold tracking-[-0.03em] text-ink">
+        Good to see you, <span className="text-ink-3">{firstName}</span>.
       </h1>
-      <p className="mb-8 text-[var(--text-sm)] text-[var(--text-secondary)]">
+      <p className="mt-1.5 mb-8 max-w-lg text-[13.5px] text-ink-2">
         {openOpportunities.length > 0
-          ? `Bloggy has ${openOpportunities.length} opportunit${openOpportunities.length === 1 ? "y" : "ies"} worth acting on.`
+          ? `Bloggy found ${openOpportunities.length} opportunit${openOpportunities.length === 1 ? "y" : "ies"} worth acting on.`
           : "Bloggy is keeping an eye on your search opportunities."}
       </p>
 
-      <div className="mb-8 grid grid-cols-1 gap-4 sm:grid-cols-3">
-        <StatCard label="Opportunities to act on" value={openOpportunities.length} href="/app/opportunities" />
-        <StatCard label="Articles in draft" value={draftArticles.length} href="/app/articles" />
-        <StatCard label="Ready to publish" value={readyArticles.length} href="/app/articles" />
-      </div>
-
       {nextAction && (
-        <Card className="mb-8 flex items-center justify-between gap-4 p-5">
-          <div>
-            <p className="mb-1 text-[var(--text-xs)] font-medium uppercase tracking-wide text-[var(--text-muted)]">
-              Next best action
-            </p>
-            <p className="text-[var(--text-base)] font-medium text-[var(--text-primary)]">
-              Review &ldquo;{nextAction.opportunity.title}&rdquo;
-            </p>
+        <Link
+          href="/app/opportunities"
+          className="mb-8 flex items-center justify-between gap-4 rounded-[var(--radius-md)] bg-ink px-6 py-5 transition-colors duration-[var(--dur-color)] hover:bg-action-hover"
+        >
+          <div className="flex min-w-0 items-center gap-3.5">
+            <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white/10 text-ink-inv">
+              <FiTarget size={16} />
+            </span>
+            <div className="min-w-0">
+              <p className="eyebrow text-white/50">Next best action</p>
+              <p className="truncate text-[14.5px] font-medium text-ink-inv">
+                Review &ldquo;{nextAction.opportunity.title}&rdquo;
+              </p>
+            </div>
           </div>
-          <Link
-            href="/app/opportunities"
-            className="shrink-0 text-[var(--text-sm)] font-medium text-[var(--accent)] hover:underline"
-          >
-            Review →
-          </Link>
-        </Card>
+          <span className="mono flex shrink-0 items-center gap-1.5 rounded-full bg-white/10 px-3 py-1.5 text-[12.5px] font-medium text-ink-inv">
+            Open
+            <FiChevronRight size={12} />
+          </span>
+        </Link>
       )}
 
+      <div className="mb-8">
+        <h2 className="eyebrow mb-3 text-ink-3">What&apos;s waiting</h2>
+        <div className="flex flex-col divide-y divide-line rounded-[var(--radius-md)] border border-line">
+          {waiting.map((row) => (
+            <Link
+              key={row.label}
+              href={row.href}
+              className="flex items-center justify-between gap-4 px-5 py-3.5 transition-colors duration-[var(--dur-color)] hover:bg-paper-sunken"
+            >
+              <span className={`mono text-[20px] font-bold ${row.count === 0 ? "text-ink-3" : "text-ink"}`}>
+                {row.count}
+              </span>
+              <span className={`flex-1 text-[13.5px] ${row.count === 0 ? "text-ink-3" : "text-ink-2"}`}>
+                {row.label}
+              </span>
+              <FiChevronRight size={14} className="shrink-0 text-ink-3" />
+            </Link>
+          ))}
+        </div>
+      </div>
+
       <div>
-        <h2 className="mb-3 text-[var(--text-sm)] font-medium text-[var(--text-muted)]">Recently</h2>
+        <h2 className="eyebrow mb-3 text-ink-3">What Bloggy did</h2>
         {recentActivity.length === 0 ? (
-          <p className="text-[var(--text-sm)] text-[var(--text-muted)]">Nothing yet.</p>
+          <p className="text-[13.5px] text-ink-3">Nothing yet.</p>
         ) : (
-          <ul className="flex flex-col gap-2">
-            {recentActivity.map((event) => (
-              <li key={event.id} className="flex items-baseline gap-2 text-[var(--text-sm)]">
-                <span className="text-[var(--text-primary)]">
-                  {describeActivity(event.verb, event.payload as Record<string, unknown>)}
-                </span>
-                <span className="text-[var(--text-xs)] text-[var(--text-muted)]">
-                  {new Date(event.createdAt).toLocaleDateString()}
-                </span>
-              </li>
-            ))}
+          <ul className="flex flex-col gap-3.5">
+            {recentActivity.map((event) => {
+              const Icon = ACTIVITY_ICON[event.verb] ?? FiCheckCircle;
+              return (
+                <li key={event.id} className="flex items-center gap-3">
+                  <Icon size={13} className="shrink-0 text-ink-3" />
+                  <span className="flex-1 text-[13.5px] text-ink-2">
+                    {describeActivity(event.verb, event.payload as Record<string, unknown>)}
+                  </span>
+                  <span className="mono shrink-0 text-[11.5px] text-ink-3">
+                    {formatRelativeTime(event.createdAt)}
+                  </span>
+                </li>
+              );
+            })}
           </ul>
         )}
+        <Link
+          href="/app/activity"
+          className="mt-4 flex items-center gap-1 text-[12.5px] font-medium text-ink-3 hover:text-ink"
+        >
+          View all activity
+          <FiChevronRight size={12} />
+        </Link>
       </div>
     </div>
-  );
-}
-
-function StatCard({ label, value, href }: { label: string; value: number; href: string }) {
-  return (
-    <Link href={href}>
-      <Card className="p-5 transition-colors hover:bg-[var(--surface-sunken)]">
-        <p className="font-serif text-[var(--text-3xl)] font-semibold text-[var(--text-primary)]">{value}</p>
-        <p className="text-[var(--text-xs)] text-[var(--text-muted)]">{label}</p>
-      </Card>
-    </Link>
   );
 }

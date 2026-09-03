@@ -52,14 +52,27 @@ export async function saveArticleAction(input: {
   title: string;
   body: string;
   reason: "edit_explicit" | "edit_autosave";
-}): Promise<{ success: boolean; error?: string }> {
+}): Promise<{ success: boolean; error?: string; fieldErrors?: Record<string, string> }> {
   try {
     const { user, organizationId } = await requireOrg();
-    const parsed = updateSchema.parse(input);
-    await getArticleForOrg(organizationId, parsed.articleId); // authorization check
+    const parsed = updateSchema.safeParse(input);
+    if (!parsed.success) {
+      const fieldErrors: Record<string, string> = {};
+      for (const issue of parsed.error.issues) {
+        const key = issue.path[0]?.toString() ?? "form";
+        if (!fieldErrors[key]) fieldErrors[key] = issue.message;
+      }
+      return { success: false, error: "Fix the highlighted fields", fieldErrors };
+    }
+    await getArticleForOrg(organizationId, parsed.data.articleId); // authorization check
 
-    await updateArticleContent(parsed.articleId, { title: parsed.title, body: parsed.body }, input.reason, user.id);
-    revalidatePath(`/app/articles/${parsed.articleId}`);
+    await updateArticleContent(
+      parsed.data.articleId,
+      { title: parsed.data.title, body: parsed.data.body },
+      input.reason,
+      user.id,
+    );
+    revalidatePath(`/app/articles/${parsed.data.articleId}`);
     return { success: true };
   } catch (err) {
     return { success: false, error: toUserMessage(err) };

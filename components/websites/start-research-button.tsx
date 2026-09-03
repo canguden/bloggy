@@ -16,10 +16,10 @@ export function StartResearchButton({ websiteId }: { websiteId: string }) {
     const result = await startResearchAction(websiteId);
     setPending(false);
     if (result.success) {
-      show("Researching search opportunities…", "success");
+      show("Researching search opportunities…", { variant: "success" });
       router.refresh();
     } else {
-      show(result.error ?? "Couldn't start research", "error");
+      show(result.error ?? "Couldn't start research", { variant: "error" });
     }
   }
 

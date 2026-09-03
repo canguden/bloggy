@@ -18,7 +18,7 @@ export function RetryAnalysisButton({ websiteId }: { websiteId: string }) {
     if (result.success) {
       router.refresh();
     } else {
-      show(result.error ?? "Couldn't retry analysis", "error");
+      show(result.error ?? "Couldn't retry analysis", { variant: "error" });
     }
   }
 

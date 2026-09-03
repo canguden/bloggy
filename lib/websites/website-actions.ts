@@ -57,3 +57,15 @@ export async function retryAnalysisAction(websiteId: string): Promise<{ success:
     return { success: false, error: toUserMessage(err) };
   }
 }
+
+export async function deleteWebsiteAction(websiteId: string): Promise<{ success: boolean; error?: string }> {
+  try {
+    const { organizationId } = await requireOrg();
+    await getWebsiteForOrg(organizationId, websiteId); // authorization check
+    await db.delete(websites).where(eq(websites.id, websiteId)); // cascades: pages, keywords, opportunities, articles, jobs
+    revalidatePath("/app/websites");
+    return { success: true };
+  } catch (err) {
+    return { success: false, error: toUserMessage(err) };
+  }
+}
