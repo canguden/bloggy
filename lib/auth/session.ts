@@ -1,10 +1,7 @@
 import "server-only";
-import { headers } from "next/headers";
-import { eq } from "drizzle-orm";
-import { auth } from "@/lib/auth/auth";
+import { connection } from "next/server";
 import { db } from "@/lib/db/client";
-import { memberships, organizations } from "@/lib/db/schema";
-import { ForbiddenError } from "@/lib/errors";
+import { memberships, organizations, users } from "@/lib/db/schema";
 
 export type SessionUser = {
   id: string;
@@ -13,37 +10,63 @@ export type SessionUser = {
 };
 
 /**
- * The one place session data is read from the request. Every server action
- * and data loader that touches tenant data must start here — never trust a
- * client-supplied userId/organizationId.
+ * Bloggy is a single-tenant tool for StudyCamp: there is no sign-in. The data
+ * model is still keyed by organizationId, so every request resolves to one
+ * fixed workspace (created on first use, idempotent).
  */
-export async function getSession() {
-  const session = await auth.api.getSession({ headers: await headers() });
-  return session;
-}
+const WORKSPACE = {
+  userId: "usr_studycamp",
+  orgId: "org_studycamp",
+  membershipId: "mem_studycamp",
+  name: "StudyCamp",
+  slug: "studycamp",
+  email: "team@studycamp.app",
+} as const;
 
-export async function requireSession(): Promise<SessionUser> {
-  const session = await getSession();
-  if (!session) throw new ForbiddenError("You must be signed in");
-  return session.user;
+let ensured: Promise<void> | null = null;
+
+async function ensureWorkspace(): Promise<void> {
+  await db.transaction(async (tx) => {
+    await tx
+      .insert(users)
+      .values({ id: WORKSPACE.userId, name: WORKSPACE.name, email: WORKSPACE.email, emailVerified: true })
+      .onConflictDoNothing();
+    await tx
+      .insert(organizations)
+      .values({ id: WORKSPACE.orgId, name: WORKSPACE.name, slug: WORKSPACE.slug })
+      .onConflictDoNothing();
+    await tx
+      .insert(memberships)
+      .values({
+        id: WORKSPACE.membershipId,
+        organizationId: WORKSPACE.orgId,
+        userId: WORKSPACE.userId,
+        role: "owner",
+      })
+      .onConflictDoNothing();
+  });
 }
 
 /**
- * Resolves the caller's organization membership. For this vertical slice each
- * user belongs to exactly one (personal) organization, created at signup —
- * multi-org switching is future work, but the shape already supports it.
+ * The one place tenant identity is resolved. Every server action and data
+ * loader that touches tenant data starts here — never trust a client-supplied
+ * organizationId.
  */
 export async function requireOrg(): Promise<{ user: SessionUser; organizationId: string; role: string }> {
-  const user = await requireSession();
+  // No cookies/headers are read any more, so without this Next would try to
+  // prerender tenant pages at build time and freeze their data.
+  await connection();
 
-  const [membership] = await db
-    .select({ organizationId: memberships.organizationId, role: memberships.role })
-    .from(memberships)
-    .innerJoin(organizations, eq(organizations.id, memberships.organizationId))
-    .where(eq(memberships.userId, user.id))
-    .limit(1);
+  // Reset on failure so a transient DB error doesn't poison the process.
+  ensured ??= ensureWorkspace().catch((err) => {
+    ensured = null;
+    throw err;
+  });
+  await ensured;
 
-  if (!membership) throw new ForbiddenError("No workspace found for this account");
-
-  return { user, organizationId: membership.organizationId, role: membership.role };
+  return {
+    user: { id: WORKSPACE.userId, name: WORKSPACE.name, email: WORKSPACE.email },
+    organizationId: WORKSPACE.orgId,
+    role: "owner",
+  };
 }

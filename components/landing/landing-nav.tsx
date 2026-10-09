@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Logo } from "@/components/ui/logo";
 
 /** Floating pill nav, inset from the viewport edges — detaches and picks up a shadow on scroll. */
-export function LandingNav({ hasSession }: { hasSession: boolean }) {
+export function LandingNav() {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -30,7 +30,7 @@ export function LandingNav({ hasSession }: { hasSession: boolean }) {
         }`}
       >
         <Link href="/" className="text-ink">
-          <Logo size={18} />
+          <Logo size={48} />
         </Link>
         <div className="hidden items-center gap-6 sm:flex">
           <a href="#loop" className="text-[13px] font-medium text-ink-2 hover:text-ink">
@@ -38,20 +38,9 @@ export function LandingNav({ hasSession }: { hasSession: boolean }) {
           </a>
         </div>
         <div className="flex items-center gap-2">
-          {hasSession ? (
-            <Link href="/app">
-              <Button size="sm">Dashboard</Button>
-            </Link>
-          ) : (
-            <>
-              <Link href="/login" className="px-2 text-[13px] font-medium text-ink-2 hover:text-ink">
-                Sign in
-              </Link>
-              <Link href="/signup">
-                <Button size="sm">Start</Button>
-              </Link>
-            </>
-          )}
+          <Link href="/app">
+            <Button size="sm">Dashboard</Button>
+          </Link>
         </div>
       </nav>
     </div>

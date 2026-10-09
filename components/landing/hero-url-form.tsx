@@ -6,15 +6,9 @@ import { FiGlobe, FiArrowUpRight } from "react-icons/fi";
 import { Button } from "@/components/ui/button";
 import { normalizeWebsiteUrl } from "@/lib/websites/normalize-url";
 import { addWebsiteAction } from "@/lib/websites/website-actions";
-import { PENDING_URL_KEY } from "@/lib/onboarding/pending-url";
 
-/**
- * Lets a visitor start with the one thing that matters — their URL — before
- * they've even signed up. Signed-out visitors get the URL carried through
- * signup/login (see PENDING_URL_KEY) and land straight in analysis; a
- * signed-in visitor skips the account step entirely.
- */
-export function HeroUrlForm({ hasSession }: { hasSession: boolean }) {
+/** Starts with the one thing that matters — a URL — and lands straight in analysis. */
+export function HeroUrlForm() {
   const router = useRouter();
   const [url, setUrl] = useState("");
   const [submitting, setSubmitting] = useState(false);
@@ -32,16 +26,6 @@ export function HeroUrlForm({ hasSession }: { hasSession: boolean }) {
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     setError(null);
-
-    if (!hasSession) {
-      try {
-        sessionStorage.setItem(PENDING_URL_KEY, url);
-      } catch {
-        // sessionStorage unavailable (private mode, etc.) — signup still works, just re-prompts for the URL
-      }
-      router.push("/signup");
-      return;
-    }
 
     setSubmitting(true);
     const formData = new FormData();

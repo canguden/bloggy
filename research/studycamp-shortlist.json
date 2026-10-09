@@ -1,0 +1,455 @@
+{
+  "generatedAt": "2026-09-20T12:09:12.845Z",
+  "rows": [
+    {
+      "keyword": "gpa calculator",
+      "volume": 823000,
+      "cpc": 5.91,
+      "kd": 38
+    },
+    {
+      "keyword": "note taking methods",
+      "volume": 90500,
+      "cpc": 3.49,
+      "kd": 28
+    },
+    {
+      "keyword": "how to study effectively",
+      "volume": 90500,
+      "cpc": 2.15,
+      "kd": 24
+    },
+    {
+      "keyword": "cornell notes",
+      "volume": 60500,
+      "cpc": 0.14,
+      "kd": 39
+    },
+    {
+      "keyword": "pomodoro technique",
+      "volume": 49500,
+      "cpc": 3.7,
+      "kd": 69
+    },
+    {
+      "keyword": "feynman technique",
+      "volume": 12100,
+      "cpc": 1.8,
+      "kd": 19
+    },
+    {
+      "keyword": "active recall",
+      "volume": 9900,
+      "cpc": 2.23,
+      "kd": 24
+    },
+    {
+      "keyword": "ai study tools",
+      "volume": 6600,
+      "cpc": 5.22,
+      "kd": 27
+    },
+    {
+      "keyword": "spaced repetition",
+      "volume": 5400,
+      "cpc": 3.76,
+      "kd": 37
+    },
+    {
+      "keyword": "lofi study music",
+      "volume": 3600,
+      "cpc": 0.25,
+      "kd": 10
+    },
+    {
+      "keyword": "retrieval practice",
+      "volume": 2900,
+      "cpc": 1.63,
+      "kd": 39
+    },
+    {
+      "keyword": "quizlet alternatives",
+      "volume": 2900,
+      "cpc": 3.53,
+      "kd": 0
+    },
+    {
+      "keyword": "quizlet alternative",
+      "volume": 2900,
+      "cpc": 3.53,
+      "kd": 0
+    },
+    {
+      "keyword": "is quizlet free",
+      "volume": 2900,
+      "cpc": 3.41,
+      "kd": 17
+    },
+    {
+      "keyword": "outline method note taking",
+      "volume": 2900,
+      "cpc": null,
+      "kd": 2
+    },
+    {
+      "keyword": "study techniques",
+      "volume": 2900,
+      "cpc": 10.72,
+      "kd": 20
+    },
+    {
+      "keyword": "best study apps",
+      "volume": 2400,
+      "cpc": 4.34,
+      "kd": 11
+    },
+    {
+      "keyword": "how to study for exams",
+      "volume": 2400,
+      "cpc": 7.65,
+      "kd": 20
+    },
+    {
+      "keyword": "best study techniques",
+      "volume": 2400,
+      "cpc": 11.12,
+      "kd": 30
+    },
+    {
+      "keyword": "memorization techniques",
+      "volume": 1900,
+      "cpc": 5.15,
+      "kd": 27
+    },
+    {
+      "keyword": "how to memorize things fast",
+      "volume": 1600,
+      "cpc": 4.17,
+      "kd": 13
+    },
+    {
+      "keyword": "how to make flashcards",
+      "volume": 1600,
+      "cpc": 2.15,
+      "kd": 19
+    },
+    {
+      "keyword": "quizlet vs anki",
+      "volume": 1600,
+      "cpc": null,
+      "kd": 0
+    },
+    {
+      "keyword": "how to take good notes",
+      "volume": 1600,
+      "cpc": 6.17,
+      "kd": 18
+    },
+    {
+      "keyword": "best flashcard app",
+      "volume": 1300,
+      "cpc": 2.8,
+      "kd": 23
+    },
+    {
+      "keyword": "ai pdf summarizer",
+      "volume": 1300,
+      "cpc": 5.47,
+      "kd": 23
+    },
+    {
+      "keyword": "spaced repetition app",
+      "volume": 1000,
+      "cpc": 1.89,
+      "kd": 24
+    },
+    {
+      "keyword": "leitner system",
+      "volume": 1000,
+      "cpc": 2.67,
+      "kd": 17
+    },
+    {
+      "keyword": "ai flashcard generator",
+      "volume": 1000,
+      "cpc": 3.84,
+      "kd": 31
+    },
+    {
+      "keyword": "chatgpt for studying",
+      "volume": 1000,
+      "cpc": 5.86,
+      "kd": 10
+    },
+    {
+      "keyword": "blurting method",
+      "volume": 880,
+      "cpc": null,
+      "kd": 0
+    },
+    {
+      "keyword": "best ai study tools",
+      "volume": 880,
+      "cpc": 5.43,
+      "kd": 20
+    },
+    {
+      "keyword": "how to study for finals",
+      "volume": 880,
+      "cpc": 4.84,
+      "kd": 7
+    },
+    {
+      "keyword": "how to take notes from a textbook",
+      "volume": 720,
+      "cpc": 3.84,
+      "kd": 0
+    },
+    {
+      "keyword": "study plan template",
+      "volume": 720,
+      "cpc": 0.93,
+      "kd": 2
+    },
+    {
+      "keyword": "how to make a study schedule",
+      "volume": 590,
+      "cpc": 3.53,
+      "kd": 6
+    },
+    {
+      "keyword": "study schedule for finals",
+      "volume": 590,
+      "cpc": null,
+      "kd": 6
+    },
+    {
+      "keyword": "practice test generator",
+      "volume": 480,
+      "cpc": 5.34,
+      "kd": 26
+    },
+    {
+      "keyword": "exam study plan",
+      "volume": 480,
+      "cpc": 1.49,
+      "kd": 16
+    },
+    {
+      "keyword": "pomodoro timer for studying",
+      "volume": 480,
+      "cpc": 0.39,
+      "kd": 50
+    },
+    {
+      "keyword": "chat with pdf",
+      "volume": 390,
+      "cpc": 3.9,
+      "kd": 31
+    },
+    {
+      "keyword": "how to study with flashcards",
+      "volume": 320,
+      "cpc": null,
+      "kd": 5
+    },
+    {
+      "keyword": "how to read a textbook",
+      "volume": 320,
+      "cpc": null,
+      "kd": 2
+    },
+    {
+      "keyword": "ai summarizer for students",
+      "volume": 260,
+      "cpc": 5.96,
+      "kd": 36
+    },
+    {
+      "keyword": "how to cram for an exam",
+      "volume": 260,
+      "cpc": null,
+      "kd": 0
+    },
+    {
+      "keyword": "how to focus while studying",
+      "volume": 260,
+      "cpc": 8.91,
+      "kd": 0
+    },
+    {
+      "keyword": "how to record lectures",
+      "volume": 210,
+      "cpc": 5.48,
+      "kd": 0
+    },
+    {
+      "keyword": "how long should you study",
+      "volume": 170,
+      "cpc": null,
+      "kd": 0
+    },
+    {
+      "keyword": "anki alternative",
+      "volume": 140,
+      "cpc": 3.5,
+      "kd": 0
+    },
+    {
+      "keyword": "how to study when you don't want to",
+      "volume": 140,
+      "cpc": null,
+      "kd": 0
+    },
+    {
+      "keyword": "interleaving study",
+      "volume": 110,
+      "cpc": null,
+      "kd": 9
+    },
+    {
+      "keyword": "best quizlet alternatives",
+      "volume": 110,
+      "cpc": null,
+      "kd": 0
+    },
+    {
+      "keyword": "active recall examples",
+      "volume": 90,
+      "cpc": null,
+      "kd": 17
+    },
+    {
+      "keyword": "how to study for a test in one day",
+      "volume": 90,
+      "cpc": 3.28,
+      "kd": 20
+    },
+    {
+      "keyword": "how does spaced repetition work",
+      "volume": 70,
+      "cpc": null,
+      "kd": 33
+    },
+    {
+      "keyword": "how to study with ai",
+      "volume": 70,
+      "cpc": 4.31,
+      "kd": 36
+    },
+    {
+      "keyword": "ai note taker for students",
+      "volume": 70,
+      "cpc": 7.36,
+      "kd": 23
+    },
+    {
+      "keyword": "best note taking apps for students",
+      "volume": 70,
+      "cpc": 2.8,
+      "kd": 8
+    },
+    {
+      "keyword": "ambient sounds for studying",
+      "volume": 50,
+      "cpc": 3.27,
+      "kd": 13
+    },
+    {
+      "keyword": "quiz generator from notes",
+      "volume": 40,
+      "cpc": 4.18,
+      "kd": 27
+    },
+    {
+      "keyword": "how to stop procrastinating studying",
+      "volume": 30,
+      "cpc": null,
+      "kd": 7
+    },
+    {
+      "keyword": "how to study for multiple exams",
+      "volume": 30,
+      "cpc": null,
+      "kd": 0
+    },
+    {
+      "keyword": "how to summarize a pdf",
+      "volume": 20,
+      "cpc": 1.62,
+      "kd": 10
+    },
+    {
+      "keyword": "notion alternatives for students",
+      "volume": 10,
+      "cpc": 6.56,
+      "kd": 10
+    },
+    {
+      "keyword": "summarize pdf with ai",
+      "volume": 10,
+      "cpc": 3.44,
+      "kd": 24
+    },
+    {
+      "keyword": "digital note taking for students",
+      "volume": 10,
+      "cpc": 0.26,
+      "kd": 63
+    },
+    {
+      "keyword": "how to organize class notes",
+      "volume": 10,
+      "cpc": null,
+      "kd": null
+    },
+    {
+      "keyword": "flashcards vs practice tests",
+      "volume": 0,
+      "cpc": null,
+      "kd": null
+    },
+    {
+      "keyword": "best study apps for college students",
+      "volume": 0,
+      "cpc": null,
+      "kd": null
+    },
+    {
+      "keyword": "how to take notes in college",
+      "volume": 0,
+      "cpc": null,
+      "kd": null
+    },
+    {
+      "keyword": "study methods for college",
+      "volume": 0,
+      "cpc": null,
+      "kd": null
+    },
+    {
+      "keyword": "how to study for exams with notes",
+      "volume": 0,
+      "cpc": null,
+      "kd": null
+    },
+    {
+      "keyword": "voice notes for students",
+      "volume": 0,
+      "cpc": null,
+      "kd": null
+    },
+    {
+      "keyword": "college study tips",
+      "volume": 0,
+      "cpc": null,
+      "kd": null
+    },
+    {
+      "keyword": "how to track grades",
+      "volume": 0,
+      "cpc": null,
+      "kd": null
+    }
+  ]
+}

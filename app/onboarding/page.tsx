@@ -14,7 +14,7 @@ export default async function OnboardingPage({
   const { websiteId, jobId } = await searchParams;
 
   // Arrived with a website + job already underway (URL entered on the
-  // landing page, carried through signup/login) — verify it's actually
+  // landing page) — verify it's actually
   // this org's before trusting it, then jump straight to the analyzing step.
   if (websiteId && jobId) {
     const website = await getWebsiteForOrg(organizationId, websiteId).catch(() => null);

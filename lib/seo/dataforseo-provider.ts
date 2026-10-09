@@ -8,7 +8,7 @@ import type { SeoProvider, KeywordIdea, KeywordMetric, SearchIntent } from "./se
 const API_BASE = "https://api.dataforseo.com/v3";
 const DEFAULT_LOCATION_CODE = 2840; // United States
 const DEFAULT_LANGUAGE_CODE = "en";
-const REQUEST_TIMEOUT_MS = 20_000;
+const REQUEST_TIMEOUT_MS = 90_000; // Labs keyword_ideas with large limits routinely takes 30s+
 
 class ProviderAuthError extends ProviderError {
   constructor() {
@@ -123,11 +123,13 @@ const keywordIdeasResultSchema = z.object({
   items: z.array(keywordIdeaItemSchema).nullable().optional(),
 });
 
+// google_ads/search_volume reports `competition` as a label ("LOW"/"MEDIUM"/"HIGH");
+// the numeric signal is `competition_index` (0-100).
 const searchVolumeResultSchema = z.object({
   keyword: z.string(),
   search_volume: z.number().nullable().optional(),
   cpc: z.number().nullable().optional(),
-  competition: z.number().nullable().optional(),
+  competition_index: z.number().nullable().optional(),
 });
 
 const serpResultItemSchema = z.object({
@@ -205,7 +207,7 @@ export const dataForSeoProvider: SeoProvider = {
         keyword: parsed.data.keyword,
         volume: parsed.data.search_volume ?? null,
         cpc: parsed.data.cpc ?? null,
-        competition: parsed.data.competition ?? null,
+        competition: parsed.data.competition_index != null ? parsed.data.competition_index / 100 : null,
       });
     }
     return metrics;

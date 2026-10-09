@@ -1,0 +1,2712 @@
+{
+  "generatedAt": "2026-09-20T12:08:07.074Z",
+  "location": "US",
+  "language": "en",
+  "candidates": [
+    {
+      "keyword": "test taking strategies",
+      "volume": 90500,
+      "cpc": 11.69,
+      "competition": 0,
+      "intent": "informational",
+      "kd": 14,
+      "score": 3770.8,
+      "serp": [
+        {
+          "position": 2,
+          "domain": "www.wichita.edu",
+          "title": "Test-Taking Techniques",
+          "url": "https://www.wichita.edu/services/studentsuccess/Study_Tips_Techniques/Test_Taking_Techniques.php"
+        },
+        {
+          "position": 4,
+          "domain": "summer.harvard.edu",
+          "title": "14 Tips for Test Taking Success - Harvard Summer School",
+          "url": "https://summer.harvard.edu/blog/14-tips-for-test-taking-success/"
+        },
+        {
+          "position": 5,
+          "domain": "missionbay.sandiegounified.org",
+          "title": "Studying and Test-Taking Strategies/Tips",
+          "url": "https://missionbay.sandiegounified.org/counseling/studying_and_test-taking_strategies_tips"
+        },
+        {
+          "position": 7,
+          "domain": "www.dmu.edu",
+          "title": "MULTIPLE CHOICE TEST TAKING STRATEGIES",
+          "url": "https://www.dmu.edu/wp-content/uploads/MULTIPLE-CHOICE-TEST-TAKING-STRATEGIES.pdf"
+        },
+        {
+          "position": 8,
+          "domain": "lms.henry.k12.ga.us",
+          "title": "Test Taking Tips and Study Skills",
+          "url": "https://lms.henry.k12.ga.us/counseling-office/counseling-department/academic-support/test-taking-tips-and-study-skills"
+        },
+        {
+          "position": 9,
+          "domain": "www.edutopia.org",
+          "title": "4 Test-Taking Strategies That Help Students Show What ...",
+          "url": "https://www.edutopia.org/article/4-test-taking-strategies-that-help-students-show-what-they-know/"
+        },
+        {
+          "position": 10,
+          "domain": "learningcenter.utah.edu",
+          "title": "Test-Taking Strategies - Learning Center",
+          "url": "https://learningcenter.utah.edu/resources/test-taking-strategies.php"
+        },
+        {
+          "position": 11,
+          "domain": "www.piqosity.com",
+          "title": "All the Test-Taking Strategies You'll Ever Need to Know",
+          "url": "https://www.piqosity.com/test-taking-strategies/"
+        }
+      ]
+    },
+    {
+      "keyword": "study",
+      "volume": 110000,
+      "cpc": 4.13,
+      "competition": 0.06,
+      "intent": "informational",
+      "kd": 53,
+      "score": 1746,
+      "serp": []
+    },
+    {
+      "keyword": "study tips",
+      "volume": 90500,
+      "cpc": 8,
+      "competition": 0,
+      "intent": "informational",
+      "kd": 44,
+      "score": 1675.9,
+      "serp": [
+        {
+          "position": 2,
+          "domain": "learningcenter.unc.edu",
+          "title": "Studying 101: Study Smarter Not Harder - UNC Learning Center",
+          "url": "https://learningcenter.unc.edu/tips-and-tools/studying-101-study-smarter-not-harder/"
+        },
+        {
+          "position": 5,
+          "domain": "www.reddit.com",
+          "title": "Give me all of your study tips you follow. : r/GetStudying",
+          "url": "https://www.reddit.com/r/GetStudying/comments/18jp6h4/give_me_all_of_your_study_tips_you_follow/"
+        },
+        {
+          "position": 6,
+          "domain": "summer.harvard.edu",
+          "title": "Top 10 Study Tips to Study Like a Harvard Student",
+          "url": "https://summer.harvard.edu/blog/top-10-study-tips-to-study-like-a-harvard-student/"
+        },
+        {
+          "position": 7,
+          "domain": "www.princetonreview.com",
+          "title": "12 Study Tips for Back to School",
+          "url": "https://www.princetonreview.com/college-advice/back-to-school-study-tips"
+        },
+        {
+          "position": 9,
+          "domain": "www.apa.org",
+          "title": "Study smart",
+          "url": "https://www.apa.org/gradpsych/2011/11/study-smart"
+        },
+        {
+          "position": 10,
+          "domain": "www.slingshotedu.com",
+          "title": "7 Study Tips for Students - Slingshot",
+          "url": "https://www.slingshotedu.com/7-study-tips-for-students"
+        },
+        {
+          "position": 11,
+          "domain": "lsc.cornell.edu",
+          "title": "How to Study",
+          "url": "https://lsc.cornell.edu/how-to-study/"
+        }
+      ]
+    },
+    {
+      "keyword": "studying",
+      "volume": 40500,
+      "cpc": 9.9,
+      "competition": 0,
+      "intent": "informational",
+      "kd": 24,
+      "score": 1191.2,
+      "serp": []
+    },
+    {
+      "keyword": "study guide",
+      "volume": 18100,
+      "cpc": 4.81,
+      "competition": 0.05,
+      "intent": "informational",
+      "kd": 8,
+      "score": 1005.6,
+      "serp": [
+        {
+          "position": 2,
+          "domain": "www.herzing.edu",
+          "title": "A Step-By-Step Guide to Create the Perfect Study Guide",
+          "url": "https://www.herzing.edu/blog/step-step-guide-create-perfect-study-guide"
+        },
+        {
+          "position": 4,
+          "domain": "www.reddit.com",
+          "title": "What is a study guide? : r/Professors",
+          "url": "https://www.reddit.com/r/Professors/comments/1ax5vog/what_is_a_study_guide/"
+        },
+        {
+          "position": 5,
+          "domain": "quizlet.com",
+          "title": "Quizlet: Study Tools & Learning Resources for Students and ...",
+          "url": "https://quizlet.com/"
+        },
+        {
+          "position": 6,
+          "domain": "flintk12.com",
+          "title": "AI study guide maker - Flint",
+          "url": "https://flintk12.com/tools/ai-study-guide-maker"
+        },
+        {
+          "position": 7,
+          "domain": "www.adobe.com",
+          "title": "How to make a study guide in 3 simple steps",
+          "url": "https://www.adobe.com/acrobat/hub/make-a-study-guide.html"
+        },
+        {
+          "position": 8,
+          "domain": "www.studyguidezone.com",
+          "title": "Study Guide Zone (Free Guides & Practice Tests)",
+          "url": "https://www.studyguidezone.com/"
+        },
+        {
+          "position": 9,
+          "domain": "www.240tutoring.com",
+          "title": "Teacher Certification Study Guides by Exam & State",
+          "url": "https://www.240tutoring.com/study-guides/?srsltid=AU7gw4ViZHJBeSLj400GfWVoy6n55p6C264vwc85OG2B32JT4qAzhhRf"
+        },
+        {
+          "position": 10,
+          "domain": "study.com",
+          "title": "Study.com: Online Courses for College Credit, Exam Prep & K ...",
+          "url": "https://study.com/"
+        },
+        {
+          "position": 11,
+          "domain": "www.youtube.com",
+          "title": "How to Make a Study Guide | Template Provided | Kathleen ...",
+          "url": "https://www.youtube.com/watch?v=UsjJBqMRogo"
+        }
+      ]
+    },
+    {
+      "keyword": "places to study",
+      "volume": 9900,
+      "cpc": 1.28,
+      "competition": 0.01,
+      "intent": "informational",
+      "kd": 0,
+      "score": 990,
+      "serp": [
+        {
+          "position": 2,
+          "domain": "m.yelp.com",
+          "title": "Best Place To Study Near San Diego, California",
+          "url": "https://m.yelp.com/search?find_desc=Best+Place+To+Study&find_loc=San+Diego%2C+CA"
+        },
+        {
+          "position": 4,
+          "domain": "www.reddit.com",
+          "title": "Places to study quietly where I won't feel bad about ...",
+          "url": "https://www.reddit.com/r/AskNYC/comments/1cgslv4/places_to_study_quietly_where_i_wont_feel_bad/"
+        },
+        {
+          "position": 6,
+          "domain": "www.magneticmemorymethod.com",
+          "title": "The 12 Best Places to Study (And How to Study at Each One)",
+          "url": "https://www.magneticmemorymethod.com/places-to-study/"
+        },
+        {
+          "position": 7,
+          "domain": "www.citizensbank.com",
+          "title": "The Best Places to Study in College",
+          "url": "https://www.citizensbank.com/student/articles/pros-cons-different-study-spaces.aspx"
+        },
+        {
+          "position": 8,
+          "domain": "insights.ehl.edu",
+          "title": "9 places where you can actually study",
+          "url": "https://insights.ehl.edu/places-student-study"
+        },
+        {
+          "position": 9,
+          "domain": "do512.com",
+          "title": "Places to Study in Austin",
+          "url": "https://do512.com/p/places-to-study"
+        },
+        {
+          "position": 10,
+          "domain": "bookscouter.com",
+          "title": "Top 8 Best Study Spots in New York City",
+          "url": "https://bookscouter.com/blog/best-study-spots-in-new-york-city/"
+        },
+        {
+          "position": 11,
+          "domain": "www.coloradotech.edu",
+          "title": "Best Places to Study: 6 Quiet and Productive Study Locations",
+          "url": "https://www.coloradotech.edu/blog/think-outside-the-coffee-shop-top-places-to-study"
+        }
+      ]
+    },
+    {
+      "keyword": "cornell tech",
+      "volume": 27100,
+      "cpc": 0.54,
+      "competition": 0.03,
+      "intent": "informational",
+      "kd": 18,
+      "score": 967.9,
+      "serp": [
+        {
+          "position": 1,
+          "domain": "tech.cornell.edu",
+          "title": "Cornell Tech",
+          "url": "https://tech.cornell.edu/"
+        },
+        {
+          "position": 3,
+          "domain": "en.wikipedia.org",
+          "title": "Cornell Tech",
+          "url": "https://en.wikipedia.org/wiki/Cornell_Tech"
+        },
+        {
+          "position": 4,
+          "domain": "www.linkedin.com",
+          "title": "Cornell Tech Employees, Location, Alumni",
+          "url": "https://www.linkedin.com/school/cornell-tech/"
+        },
+        {
+          "position": 5,
+          "domain": "www.instagram.com",
+          "title": "Cornell Tech (@cornell_tech) · New York, NY",
+          "url": "https://www.instagram.com/cornell_tech/?hl=en"
+        },
+        {
+          "position": 7,
+          "domain": "courses.cornell.edu",
+          "title": "Cornell Tech",
+          "url": "https://courses.cornell.edu/cornell-tech/"
+        },
+        {
+          "position": 8,
+          "domain": "www.reddit.com",
+          "title": "Is Cornell Tech Just as Prestigious as Cornell? - Ithaca",
+          "url": "https://www.reddit.com/r/Cornell/comments/adb1g4/is_cornell_tech_just_as_prestigious_as_cornell/"
+        },
+        {
+          "position": 9,
+          "domain": "www.bloomberg.org",
+          "title": "Cornell Tech",
+          "url": "https://www.bloomberg.org/education/supporting-educational-institutions/cornell-tech/"
+        }
+      ]
+    },
+    {
+      "keyword": "ai homework helper",
+      "volume": 60500,
+      "cpc": 3.73,
+      "competition": 0.02,
+      "intent": "informational",
+      "kd": 54,
+      "score": 945.3,
+      "serp": [
+        {
+          "position": 1,
+          "domain": "notegpt.io",
+          "title": "AI Homework Helper - Online Free, No Sign-up",
+          "url": "https://notegpt.io/ai-homework-helper"
+        },
+        {
+          "position": 2,
+          "domain": "play.google.com",
+          "title": "AI Homework Helper: AI Tutor - Apps on Google Play",
+          "url": "https://play.google.com/store/apps/details?id=com.monktechstudio.aihomework.helper.student&hl=en"
+        },
+        {
+          "position": 3,
+          "domain": "www.gauthmath.com",
+          "title": "Gauth - Best AI Homework Helper for All School Subjects",
+          "url": "https://www.gauthmath.com/"
+        },
+        {
+          "position": 4,
+          "domain": "edubrain.ai",
+          "title": "Free AI Homework Helper, No Sign-Up - Edubrain.ai",
+          "url": "https://edubrain.ai/"
+        },
+        {
+          "position": 5,
+          "domain": "decopy.ai",
+          "title": "Free AI Homework Helper: Picture Solver, No Sign-Up!",
+          "url": "https://decopy.ai/ai-homework/"
+        },
+        {
+          "position": 6,
+          "domain": "aihomeworkhelper.org",
+          "title": "AI Homework Helper: Solve Math, Science & More | No Sign-Up",
+          "url": "https://aihomeworkhelper.org/"
+        },
+        {
+          "position": 7,
+          "domain": "questionai.io",
+          "title": "Free AI Homework Helper - Question AI",
+          "url": "https://questionai.io/"
+        },
+        {
+          "position": 8,
+          "domain": "www.quiz-gpt.com",
+          "title": "Quiz AI - Best AI Homework Helper｜Solve All Subject",
+          "url": "https://www.quiz-gpt.com/"
+        },
+        {
+          "position": 10,
+          "domain": "studymonkey.ai",
+          "title": "Free AI homework helper - Step-by-step AI tutoring ...",
+          "url": "https://studymonkey.ai/"
+        }
+      ]
+    },
+    {
+      "keyword": "studying as a hobby",
+      "volume": 8100,
+      "cpc": null,
+      "competition": 0,
+      "intent": "informational",
+      "kd": 0,
+      "score": 810,
+      "serp": [
+        {
+          "position": 2,
+          "domain": "www.reddit.com",
+          "title": "I study as a hobby. I know it's weird.",
+          "url": "https://www.reddit.com/r/Hobbies/comments/8p5a75/i_study_as_a_hobby_i_know_its_weird/"
+        },
+        {
+          "position": 4,
+          "domain": "www.openstudycollege.com",
+          "title": "Studying as a hobby",
+          "url": "https://www.openstudycollege.com/blog/studying-hobby"
+        },
+        {
+          "position": 5,
+          "domain": "medium.com",
+          "title": "How I Turned Studying into a Hobby? | by Stred",
+          "url": "https://medium.com/@stred/how-i-turned-studying-into-a-hobby-48856f9a2b54"
+        },
+        {
+          "position": 6,
+          "domain": "www.quora.com",
+          "title": "Why is studying your favourite hobby?",
+          "url": "https://www.quora.com/Why-is-studying-your-favourite-hobby"
+        },
+        {
+          "position": 7,
+          "domain": "emorywheel.com",
+          "title": "Tips to Effectively Combining Studying and Hobbies",
+          "url": "https://emorywheel.com/article/tips-to-effectively-combining-studying-and-hobbies-20260403"
+        },
+        {
+          "position": 8,
+          "domain": "sarahschauer.substack.com",
+          "title": "How to Start Researching as a Hobby - by Sarah Schauer",
+          "url": "https://sarahschauer.substack.com/p/how-to-start-to-researching-as-a"
+        },
+        {
+          "position": 9,
+          "domain": "forums.studentdoctor.net",
+          "title": "Studying as a \"hobby\"",
+          "url": "https://forums.studentdoctor.net/threads/studying-as-a-hobby.1121751/"
+        },
+        {
+          "position": 10,
+          "domain": "www.facebook.com",
+          "title": "Studying is usually associated with school and work, so it's ...",
+          "url": "https://www.facebook.com/groups/289783688341983/posts/1124796294840714/"
+        }
+      ]
+    },
+    {
+      "keyword": "study group",
+      "volume": 22200,
+      "cpc": 3.66,
+      "competition": 0.01,
+      "intent": "informational",
+      "kd": 21,
+      "score": 716.1,
+      "serp": []
+    },
+    {
+      "keyword": "cornell box",
+      "volume": 12100,
+      "cpc": 3.26,
+      "competition": 0.01,
+      "intent": "informational",
+      "kd": 7,
+      "score": 711.8,
+      "serp": [
+        {
+          "position": 1,
+          "domain": "it.cornell.edu",
+          "title": "Box | IT@Cornell",
+          "url": "https://it.cornell.edu/box"
+        },
+        {
+          "position": 2,
+          "domain": "cornell.app.box.com",
+          "title": "Box Login",
+          "url": "https://cornell.app.box.com/folder/0"
+        },
+        {
+          "position": 3,
+          "domain": "en.wikipedia.org",
+          "title": "Cornell box",
+          "url": "https://en.wikipedia.org/wiki/Cornell_box"
+        },
+        {
+          "position": 5,
+          "domain": "bowers.cornell.edu",
+          "title": "The Cornell Box",
+          "url": "https://bowers.cornell.edu/cornell-box"
+        },
+        {
+          "position": 6,
+          "domain": "www.cornellstore.com",
+          "title": "Cornell 9.5 x7.75 x 4 Shipping Gift Box",
+          "url": "https://www.cornellstore.com/Cornell-9.5-x7.75-x-4-Shipping-Gift-Box"
+        },
+        {
+          "position": 7,
+          "domain": "www.youtube.com",
+          "title": "Cornell Box - Friday Minis 155",
+          "url": "https://www.youtube.com/watch?v=3t6JPMuEQhQ"
+        },
+        {
+          "position": 8,
+          "domain": "it.cornell.edu",
+          "title": "File Storage at Cornell",
+          "url": "https://it.cornell.edu/file-storage"
+        }
+      ]
+    },
+    {
+      "keyword": "finals schedule",
+      "volume": 12100,
+      "cpc": null,
+      "competition": 0,
+      "intent": "informational",
+      "kd": 8,
+      "score": 672.2,
+      "serp": [
+        {
+          "position": 2,
+          "domain": "www.nba.com",
+          "title": "2026 NBA Finals",
+          "url": "https://www.nba.com/playoffs/2026/nba-finals"
+        },
+        {
+          "position": 3,
+          "domain": "www.cpp.edu",
+          "title": "Fall and Spring Finals Week Schedule",
+          "url": "https://www.cpp.edu/studentsuccess/academic-calendar/finals-week.shtml"
+        },
+        {
+          "position": 5,
+          "domain": "registrar.indiana.edu",
+          "title": "Final Examination Schedule: Calendars & ...",
+          "url": "https://registrar.indiana.edu/calendars/exam-schedule.html"
+        },
+        {
+          "position": 6,
+          "domain": "www.chapman.edu",
+          "title": "Final Exam Schedule",
+          "url": "https://www.chapman.edu/students/academic-resources/registrar/student-services/final-exam-schedule.aspx"
+        },
+        {
+          "position": 7,
+          "domain": "www.stmartin.edu",
+          "title": "Finals schedule",
+          "url": "https://www.stmartin.edu/directory/offices-departments-directory/office-registrar/finals-schedule"
+        },
+        {
+          "position": 8,
+          "domain": "www.ju.edu",
+          "title": "Final Exam Schedule",
+          "url": "https://www.ju.edu/registrar/final-exam-schedule.php"
+        },
+        {
+          "position": 9,
+          "domain": "www.espn.com",
+          "title": "NBA makes changes to Finals schedule",
+          "url": "https://www.espn.com/video/clip/_/id/13729556"
+        },
+        {
+          "position": 10,
+          "domain": "www.calendarx.com",
+          "title": "2026 NBA Finals Schedule",
+          "url": "https://www.calendarx.com/schedule/nba-finals-schedule"
+        },
+        {
+          "position": 11,
+          "domain": "www.espn.com",
+          "title": "2026 NBA playoffs: Schedule, scores, news and highlights",
+          "url": "https://www.espn.com/nba/story/_/id/48419498/nba-playoffs-2026-play-finals-schedule-scores-news-highlights-bracket-dates"
+        }
+      ]
+    },
+    {
+      "keyword": "study guide maker",
+      "volume": 8100,
+      "cpc": 4.1,
+      "competition": 0.45,
+      "intent": "informational",
+      "kd": 6,
+      "score": 506.3,
+      "serp": [
+        {
+          "position": 1,
+          "domain": "www.studyfetch.com",
+          "title": "Study Guide Maker | AI Study Guide Generator",
+          "url": "https://www.studyfetch.com/study-guide-maker"
+        },
+        {
+          "position": 2,
+          "domain": "flintk12.com",
+          "title": "AI study guide maker - Flint",
+          "url": "https://flintk12.com/tools/ai-study-guide-maker"
+        },
+        {
+          "position": 4,
+          "domain": "www.remnote.com",
+          "title": "AI Study Guide Maker From Notes and PDFs",
+          "url": "https://www.remnote.com/feature/study-guide-maker"
+        },
+        {
+          "position": 5,
+          "domain": "www.atlas.org",
+          "title": "AI Study Guide Maker | Atlas",
+          "url": "https://www.atlas.org/features/ai-study-guide-maker"
+        },
+        {
+          "position": 6,
+          "domain": "scribe.com",
+          "title": "AI Study Guide Maker",
+          "url": "https://scribe.com/tools/ai-study-guide-maker"
+        },
+        {
+          "position": 7,
+          "domain": "notebooklm.google",
+          "title": "AI Study Tool for Students - Gemini Notebook",
+          "url": "https://notebooklm.google/students"
+        },
+        {
+          "position": 8,
+          "domain": "www.penseum.com",
+          "title": "Penseum: Free AI Study Tool & Study Guide Maker",
+          "url": "https://www.penseum.com/"
+        },
+        {
+          "position": 9,
+          "domain": "www.reddit.com",
+          "title": "AI to Help Make Study Guide/Activities? : r/Teachers",
+          "url": "https://www.reddit.com/r/Teachers/comments/1hmfzlg/ai_to_help_make_study_guideactivities/"
+        },
+        {
+          "position": 10,
+          "domain": "quizlet.com",
+          "title": "AI Study Guide Maker: Instantly Summarize Notes, PDFs ...",
+          "url": "https://quizlet.com/features/study-guides"
+        }
+      ]
+    },
+    {
+      "keyword": "cornell scheduling",
+      "volume": 14800,
+      "cpc": null,
+      "competition": 0,
+      "intent": "informational",
+      "kd": 20,
+      "score": 493.3,
+      "serp": [
+        {
+          "position": 1,
+          "domain": "scheduling.cornell.edu",
+          "title": "Scheduling@Cornell - Cornell University",
+          "url": "https://scheduling.cornell.edu/"
+        },
+        {
+          "position": 2,
+          "domain": "it.cornell.edu",
+          "title": "Scheduling@Cornell",
+          "url": "https://it.cornell.edu/schedulingcornell"
+        },
+        {
+          "position": 3,
+          "domain": "classes.cornell.edu",
+          "title": "Fall 2026 - Using Scheduler - Class Roster",
+          "url": "https://classes.cornell.edu/content/FA26/using-scheduler"
+        },
+        {
+          "position": 4,
+          "domain": "25live.collegenet.com",
+          "title": "Scheduling@Cornell",
+          "url": "https://25live.collegenet.com/pro/cornell"
+        },
+        {
+          "position": 5,
+          "domain": "it.cornell.edu",
+          "title": "Room Scheduler - Cornell University",
+          "url": "https://it.cornell.edu/roomscheduler"
+        },
+        {
+          "position": 6,
+          "domain": "dbp.cornell.edu",
+          "title": "Scheduling-Related Policies - Division of Budget and Planning",
+          "url": "https://dbp.cornell.edu/home/space-planning/scheduling-related-policies/"
+        },
+        {
+          "position": 7,
+          "domain": "classes.cornell.edu",
+          "title": "Fall 2025 - Using Scheduler - Class Roster",
+          "url": "https://classes.cornell.edu/content/FA25/using-scheduler"
+        }
+      ]
+    },
+    {
+      "keyword": "cornell outlook",
+      "volume": 6600,
+      "cpc": null,
+      "competition": 0,
+      "intent": "informational",
+      "kd": 4,
+      "score": 471.4,
+      "serp": [
+        {
+          "position": 1,
+          "domain": "it.cornell.edu",
+          "title": "Outlook on the Web - Cornell University",
+          "url": "https://it.cornell.edu/outlook-web"
+        },
+        {
+          "position": 2,
+          "domain": "it.cornell.edu",
+          "title": "Microsoft Outlook | IT@Cornell",
+          "url": "https://it.cornell.edu/microsoft-outlook"
+        },
+        {
+          "position": 3,
+          "domain": "outlook.office.com",
+          "title": "Cornell University",
+          "url": "https://outlook.office.com/owa/wcmc.cornell.edu"
+        },
+        {
+          "position": 4,
+          "domain": "adfs.ad.cornell.edu",
+          "title": "Sign In",
+          "url": "https://adfs.ad.cornell.edu/adfs/ls/?wa=wsignin1.0&wtrealm=urn:federation:MicrosoftOnline"
+        },
+        {
+          "position": 5,
+          "domain": "it.cornell.edu",
+          "title": "Before You Start Using Two-Step Login with Microsoft 365",
+          "url": "https://it.cornell.edu/twostep/you-start-using-two-step-login-microsoft-365"
+        },
+        {
+          "position": 6,
+          "domain": "it.cornell.edu",
+          "title": "Choose Which Email/Calendar App to Use (with Microsoft 365)",
+          "url": "https://it.cornell.edu/email-cornell/choose-which-emailcalendar-app-use-microsoft-365"
+        },
+        {
+          "position": 7,
+          "domain": "it.cornell.edu",
+          "title": "microsoft outlook | IT@Cornell",
+          "url": "https://it.cornell.edu/tags/microsoft-outlook"
+        },
+        {
+          "position": 8,
+          "domain": "its.weill.cornell.edu",
+          "title": "Office 365 Email/Calendar",
+          "url": "https://its.weill.cornell.edu/services/email-calendar/office-365-emailcalendar"
+        },
+        {
+          "position": 9,
+          "domain": "learn.microsoft.com",
+          "title": "Can't access Outlook.com with Microsoft account ...",
+          "url": "https://learn.microsoft.com/en-us/answers/questions/4477346/cant-access-outlook-com-with-microsoft-account-wit"
+        }
+      ]
+    },
+    {
+      "keyword": "cornell email",
+      "volume": 4400,
+      "cpc": null,
+      "competition": 0,
+      "intent": "informational",
+      "kd": 0,
+      "score": 440,
+      "serp": [
+        {
+          "position": 1,
+          "domain": "it.cornell.edu",
+          "title": "Outlook on the Web - Cornell University",
+          "url": "https://it.cornell.edu/outlook-web"
+        },
+        {
+          "position": 2,
+          "domain": "it.cornell.edu",
+          "title": "Microsoft Outlook | IT@Cornell",
+          "url": "https://it.cornell.edu/microsoft-outlook"
+        },
+        {
+          "position": 3,
+          "domain": "it.cornell.edu",
+          "title": "Email @ Cornell",
+          "url": "https://it.cornell.edu/email-cornell"
+        },
+        {
+          "position": 4,
+          "domain": "outlook.office.com",
+          "title": "Cornell University",
+          "url": "https://outlook.office.com/owa/wcmc.cornell.edu"
+        },
+        {
+          "position": 5,
+          "domain": "it.cornell.edu",
+          "title": "email - Cornell University",
+          "url": "https://it.cornell.edu/tags/email"
+        },
+        {
+          "position": 6,
+          "domain": "its.weill.cornell.edu",
+          "title": "Office 365 Email/Calendar",
+          "url": "https://its.weill.cornell.edu/services/email-calendar/office-365-emailcalendar"
+        },
+        {
+          "position": 7,
+          "domain": "cornelladmissions.happyfox.com",
+          "title": "How do I get a Cornell email account?",
+          "url": "https://cornelladmissions.happyfox.com/kb/article/321-as-an-admitted-student-how-do-i-get-a-cornell-email-account/"
+        },
+        {
+          "position": 8,
+          "domain": "www.edisonmail.com",
+          "title": "Multi-Email App Best For Your Cornell Email",
+          "url": "https://www.edisonmail.com/cornell-email"
+        },
+        {
+          "position": 9,
+          "domain": "it.cornell.edu",
+          "title": "Set Your Email Delivery Options - Cornell University",
+          "url": "https://it.cornell.edu/microsoft-outlook/set-your-email-delivery-options"
+        },
+        {
+          "position": 10,
+          "domain": "it.cornell.edu",
+          "title": "Print Email Messages (Outlook on the Web) - Cornell University",
+          "url": "https://it.cornell.edu/outlook-web/print-email-messages-outlook-web"
+        }
+      ]
+    },
+    {
+      "keyword": "studying homework",
+      "volume": 8100,
+      "cpc": 6.58,
+      "competition": 0.02,
+      "intent": "informational",
+      "kd": 9,
+      "score": 426.3,
+      "serp": [
+        {
+          "position": 2,
+          "domain": "www.reddit.com",
+          "title": "How do you guys study AND do HW efficiently? : r/college",
+          "url": "https://www.reddit.com/r/college/comments/z5asmz/how_do_you_guys_study_and_do_hw_efficiently/"
+        },
+        {
+          "position": 4,
+          "domain": "www.edutopia.org",
+          "title": "The Pros and Cons of Homework (in 6 Charts)",
+          "url": "https://www.edutopia.org/visual-essay/the-pros-and-cons-of-homework-in-6-charts/"
+        },
+        {
+          "position": 6,
+          "domain": "www.post-it.com",
+          "title": "4 study tips to help with homework",
+          "url": "https://www.post-it.com/3M/en_US/post-it/ideas/articles/4-study-tips-to-help-with-homework/"
+        },
+        {
+          "position": 7,
+          "domain": "lindamoodbell.com",
+          "title": "Homework 101: Tips for Better Study Skills",
+          "url": "https://lindamoodbell.com/helpful-tips/homework-101-tips-better-study-skills"
+        },
+        {
+          "position": 8,
+          "domain": "play.google.com",
+          "title": "StudyX: AI Homework Helper - Apps on Google Play",
+          "url": "https://play.google.com/store/apps/details?id=com.brilian.studyx.student&hl=en_US"
+        },
+        {
+          "position": 9,
+          "domain": "www.quora.com",
+          "title": "Should I first study or do homework?",
+          "url": "https://www.quora.com/Should-I-first-study-or-do-homework"
+        },
+        {
+          "position": 10,
+          "domain": "www.princetonreview.com",
+          "title": "Homework Wars: 8 Essential Study Habits for Parents",
+          "url": "https://www.princetonreview.com/college-advice/homework-study-habits-for-parents"
+        },
+        {
+          "position": 11,
+          "domain": "learningcenter.unc.edu",
+          "title": "Studying 101: Study Smarter Not Harder - UNC Learning Center",
+          "url": "https://learningcenter.unc.edu/tips-and-tools/studying-101-study-smarter-not-harder/"
+        }
+      ]
+    },
+    {
+      "keyword": "hobby study",
+      "volume": 8100,
+      "cpc": null,
+      "competition": 0,
+      "intent": "informational",
+      "kd": 10,
+      "score": 405,
+      "serp": [
+        {
+          "position": 2,
+          "domain": "www.openstudycollege.com",
+          "title": "Studying as a hobby",
+          "url": "https://www.openstudycollege.com/blog/studying-hobby"
+        },
+        {
+          "position": 3,
+          "domain": "studyhobby.com",
+          "title": "Hobby Study | StudyHobby AI",
+          "url": "https://studyhobby.com/blogs/hobby-study"
+        },
+        {
+          "position": 5,
+          "domain": "www.tandfonline.com",
+          "title": "Exploring the Impact of Hobbies on Mental Health and Well ...",
+          "url": "https://www.tandfonline.com/doi/full/10.1080/01612840.2025.2512006"
+        },
+        {
+          "position": 6,
+          "domain": "www.reddit.com",
+          "title": "I study as a hobby. I know it's weird.",
+          "url": "https://www.reddit.com/r/Hobbies/comments/8p5a75/i_study_as_a_hobby_i_know_its_weird/"
+        },
+        {
+          "position": 7,
+          "domain": "www.quora.com",
+          "title": "Why is studying your favourite hobby?",
+          "url": "https://www.quora.com/Why-is-studying-your-favourite-hobby"
+        },
+        {
+          "position": 8,
+          "domain": "www.uclahealth.org",
+          "title": "3 proven health benefits of having a hobby",
+          "url": "https://www.uclahealth.org/news/article/3-proven-health-benefits-having-hobby"
+        },
+        {
+          "position": 9,
+          "domain": "emorywheel.com",
+          "title": "Tips to Effectively Combining Studying and Hobbies",
+          "url": "https://emorywheel.com/article/tips-to-effectively-combining-studying-and-hobbies-20260403"
+        },
+        {
+          "position": 10,
+          "domain": "pubmed.ncbi.nlm.nih.gov",
+          "title": "Exploring the Impact of Hobbies on Mental Health and Well ...",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/40489730/"
+        },
+        {
+          "position": 11,
+          "domain": "www.webmd.com",
+          "title": "Health Benefits of Hobbies",
+          "url": "https://www.webmd.com/balance/health-benefits-of-hobbies"
+        }
+      ]
+    },
+    {
+      "keyword": "cornell schedule",
+      "volume": 14800,
+      "cpc": null,
+      "competition": 0,
+      "intent": "informational",
+      "kd": 30,
+      "score": 370,
+      "serp": [
+        {
+          "position": 1,
+          "domain": "registrar.cornell.edu",
+          "title": "Academic Calendar 2026-2027 | Registrar - Cornell University",
+          "url": "https://registrar.cornell.edu/calendars-exams/academic-calendar"
+        },
+        {
+          "position": 2,
+          "domain": "registrar.cornell.edu",
+          "title": "2025-26 Academic Calendar - Registrar - Cornell University",
+          "url": "https://registrar.cornell.edu/academic-calendar/future-and-archived-calendars/2025-26-academic-calendar"
+        },
+        {
+          "position": 3,
+          "domain": "classes.cornell.edu",
+          "title": "Fall 2025 - Using Scheduler - Class Roster",
+          "url": "https://classes.cornell.edu/content/FA25/using-scheduler"
+        },
+        {
+          "position": 4,
+          "domain": "scheduling.cornell.edu",
+          "title": "Scheduling@Cornell - Cornell University",
+          "url": "https://scheduling.cornell.edu/"
+        },
+        {
+          "position": 5,
+          "domain": "studentaffairs.tech.cornell.edu",
+          "title": "Academic Calendar",
+          "url": "https://studentaffairs.tech.cornell.edu/academics/academic-calendar/"
+        },
+        {
+          "position": 6,
+          "domain": "catalog.cornell.edu",
+          "title": "Academic Calendar",
+          "url": "https://catalog.cornell.edu/enrollment-credit-requirements/academic-calendar/"
+        },
+        {
+          "position": 7,
+          "domain": "www.cornellcollege.edu",
+          "title": "Academic Calendars",
+          "url": "https://www.cornellcollege.edu/registrar/academic-calendar/"
+        },
+        {
+          "position": 8,
+          "domain": "community.lawschool.cornell.edu",
+          "title": "Academic Calendar & Schedules",
+          "url": "https://community.lawschool.cornell.edu/academics/academic-calendar-schedules/"
+        },
+        {
+          "position": 9,
+          "domain": "cornellbigred.com",
+          "title": "Composite Schedule",
+          "url": "https://cornellbigred.com/calendar"
+        }
+      ]
+    },
+    {
+      "keyword": "study meme",
+      "volume": 3600,
+      "cpc": null,
+      "competition": 0,
+      "intent": "informational",
+      "kd": 0,
+      "score": 360,
+      "serp": []
+    },
+    {
+      "keyword": "canvas cornell",
+      "volume": 8100,
+      "cpc": null,
+      "competition": 0,
+      "intent": "informational",
+      "kd": 15,
+      "score": 324,
+      "serp": [
+        {
+          "position": 1,
+          "domain": "canvas.cornell.edu",
+          "title": "Canvas@Cornell",
+          "url": "https://canvas.cornell.edu/"
+        },
+        {
+          "position": 2,
+          "domain": "teaching.cornell.edu",
+          "title": "Log into Canvas - Center for Teaching Innovation",
+          "url": "https://teaching.cornell.edu/resourceextorfile/log-canvas"
+        },
+        {
+          "position": 3,
+          "domain": "statements.cornell.edu",
+          "title": "Update: Cornell Canvas access restored",
+          "url": "https://statements.cornell.edu/2026/20260508-canvas-access-restored.cfm"
+        },
+        {
+          "position": 4,
+          "domain": "teaching.cornell.edu",
+          "title": "Canvas - Center for Teaching Innovation - Cornell University",
+          "url": "https://teaching.cornell.edu/course-management-canvas"
+        },
+        {
+          "position": 5,
+          "domain": "vod.video.cornell.edu",
+          "title": "Search for tag: \"canvas.cornell.edu\"",
+          "url": "https://vod.video.cornell.edu/tag?tagid=canvas.cornell.edu"
+        },
+        {
+          "position": 6,
+          "domain": "ecornell.cornell.edu",
+          "title": "eCornell - Cornell University",
+          "url": "https://ecornell.cornell.edu/"
+        },
+        {
+          "position": 7,
+          "domain": "career.cornell.edu",
+          "title": "Career Development Toolkit (Canvas) - Cornell Career Services",
+          "url": "https://career.cornell.edu/resources/career-development-toolkit-canvas/"
+        }
+      ]
+    },
+    {
+      "keyword": "cornell note taking",
+      "volume": 14800,
+      "cpc": 0.27,
+      "competition": 0.02,
+      "intent": "informational",
+      "kd": 37,
+      "score": 314.9,
+      "serp": [
+        {
+          "position": 2,
+          "domain": "lsc.cornell.edu",
+          "title": "The Cornell Note Taking System",
+          "url": "https://lsc.cornell.edu/how-to-study/taking-notes/cornell-note-taking-system/"
+        },
+        {
+          "position": 4,
+          "domain": "www.goodnotes.com",
+          "title": "Cornell Note Taking — The Best Way To Take Notes ...",
+          "url": "https://www.goodnotes.com/blog/cornell-notes"
+        },
+        {
+          "position": 6,
+          "domain": "www.youtube.com",
+          "title": "How to study efficiently: The Cornell Notes Method",
+          "url": "https://www.youtube.com/watch?v=xSYnGhlnzyw"
+        },
+        {
+          "position": 8,
+          "domain": "en.wikipedia.org",
+          "title": "Cornell Notes",
+          "url": "https://en.wikipedia.org/wiki/Cornell_Notes"
+        },
+        {
+          "position": 9,
+          "domain": "www.cultivatedmanagement.com",
+          "title": "Cornell Note-Taking Method: Boring but effective",
+          "url": "https://www.cultivatedmanagement.com/the-cornell-note-taking-method/"
+        },
+        {
+          "position": 10,
+          "domain": "www.adobe.com",
+          "title": "Cornell notes: what are they and how to use them",
+          "url": "https://www.adobe.com/acrobat/resources/cornell-notes.html"
+        },
+        {
+          "position": 11,
+          "domain": "www.umfk.edu",
+          "title": "Successful Note Taking",
+          "url": "https://www.umfk.edu/offices/student-success/successful-note-taking/"
+        }
+      ]
+    },
+    {
+      "keyword": "cornell clubs",
+      "volume": 6600,
+      "cpc": 0.35,
+      "competition": 0,
+      "intent": "informational",
+      "kd": 11,
+      "score": 314.3,
+      "serp": [
+        {
+          "position": 1,
+          "domain": "scl.cornell.edu",
+          "title": "Get Involved | Student & Campus Life - Cornell University",
+          "url": "https://scl.cornell.edu/get-involved"
+        },
+        {
+          "position": 2,
+          "domain": "cornell.campusgroups.com",
+          "title": "List Of Groups - Cornell Campus Groups",
+          "url": "https://cornell.campusgroups.com/club_signup"
+        },
+        {
+          "position": 3,
+          "domain": "faq.enrollment.cornell.edu",
+          "title": "What clubs and organizations does Cornell have?",
+          "url": "https://faq.enrollment.cornell.edu/kb/article/263-what-clubs-and-organizations-does-cornell-have/"
+        },
+        {
+          "position": 4,
+          "domain": "eship.cornell.edu",
+          "title": "Student Clubs and Related Organizations Archives",
+          "url": "https://eship.cornell.edu/cat/student-clubs-organizations/"
+        },
+        {
+          "position": 6,
+          "domain": "cornell.campusgroups.com",
+          "title": "Cornell Campus Groups",
+          "url": "https://cornell.campusgroups.com/home_login"
+        },
+        {
+          "position": 7,
+          "domain": "www.reddit.com",
+          "title": "Clubs at Cornell",
+          "url": "https://www.reddit.com/r/Cornell/comments/16lk3vt/clubs_at_cornell/"
+        },
+        {
+          "position": 8,
+          "domain": "www.duffield.cornell.edu",
+          "title": "Clubs and Organizations | Cornell Duffield Engineering",
+          "url": "https://www.duffield.cornell.edu/clubs-organizations/"
+        },
+        {
+          "position": 9,
+          "domain": "www.cornellcollege.edu",
+          "title": "Cornell College Student Organizations and Clubs",
+          "url": "https://www.cornellcollege.edu/student-activities/clubs-organizations.shtml"
+        },
+        {
+          "position": 11,
+          "domain": "undergraduateresearch.cornell.edu",
+          "title": "Getting Started › Student Clubs & Related Groups",
+          "url": "https://undergraduateresearch.cornell.edu/getting-started/student-clubs-related-groups/"
+        }
+      ]
+    },
+    {
+      "keyword": "cornell academic calendar",
+      "volume": 12100,
+      "cpc": null,
+      "competition": 0,
+      "intent": "informational",
+      "kd": 32,
+      "score": 288.1,
+      "serp": [
+        {
+          "position": 1,
+          "domain": "registrar.cornell.edu",
+          "title": "Academic Calendar 2026-2027 | Registrar - Cornell University",
+          "url": "https://registrar.cornell.edu/calendars-exams/academic-calendar"
+        },
+        {
+          "position": 2,
+          "domain": "catalog.cornell.edu",
+          "title": "Academic Calendar",
+          "url": "https://catalog.cornell.edu/enrollment-credit-requirements/academic-calendar/"
+        },
+        {
+          "position": 3,
+          "domain": "studentaffairs.tech.cornell.edu",
+          "title": "Academic Calendar",
+          "url": "https://studentaffairs.tech.cornell.edu/academics/academic-calendar/"
+        },
+        {
+          "position": 4,
+          "domain": "community.lawschool.cornell.edu",
+          "title": "Academic Calendar & Schedules",
+          "url": "https://community.lawschool.cornell.edu/academics/academic-calendar-schedules/"
+        },
+        {
+          "position": 5,
+          "domain": "www.cornellcollege.edu",
+          "title": "Academic Calendars",
+          "url": "https://www.cornellcollege.edu/registrar/academic-calendar/"
+        },
+        {
+          "position": 6,
+          "domain": "community.lawschool.cornell.edu",
+          "title": "2026-27 Academic Calendar - Cornell Law School Community",
+          "url": "https://community.lawschool.cornell.edu/academics/2026-27-academic-calendar/"
+        },
+        {
+          "position": 7,
+          "domain": "www.facebook.com",
+          "title": "Cornell University 2026-2027 campus photography calendar",
+          "url": "https://www.facebook.com/TheCornellStore/posts/%EF%B8%8F-bring-cornell-to-your-wall-with-the-20262027-cornell-academic-wall-calendar-%EF%B8%8F-/1440314364783910/"
+        }
+      ]
+    },
+    {
+      "keyword": "cornell zoom",
+      "volume": 6600,
+      "cpc": null,
+      "competition": 0,
+      "intent": "informational",
+      "kd": 13,
+      "score": 287,
+      "serp": [
+        {
+          "position": 1,
+          "domain": "cornell.zoom.us",
+          "title": "Cornell University's Online Web and Video ... - Zoom",
+          "url": "https://cornell.zoom.us/"
+        },
+        {
+          "position": 2,
+          "domain": "it.cornell.edu",
+          "title": "Zoom | IT@Cornell",
+          "url": "https://it.cornell.edu/zoom"
+        },
+        {
+          "position": 4,
+          "domain": "its.weill.cornell.edu",
+          "title": "Zoom | Information Technologies & Services",
+          "url": "https://its.weill.cornell.edu/services/online-collaboration/zoom"
+        },
+        {
+          "position": 5,
+          "domain": "www.nearity.co",
+          "title": "how to use Cornell Zoom",
+          "url": "https://www.nearity.co/blog/complete-guide-about-cornell-Zoom?srsltid=AU7gw4W4zwo-Cf5tz-MpJibwi0lTVbfuzqoHQJoWk7-Nb27ifEE2agNE"
+        },
+        {
+          "position": 6,
+          "domain": "www.nearhub.us",
+          "title": "Complete Guide of Cornell Zoom",
+          "url": "https://www.nearhub.us/blog/what-is-cornell-zoom-and-how-to-use-cornell-zoom?srsltid=AU7gw4WgITbowzltfHkw08NEfkyMQuSdYhwNP6ncuysxOQkUdF-Yugj9"
+        },
+        {
+          "position": 7,
+          "domain": "it.cornell.edu",
+          "title": "Activate Zoom Account | IT@Cornell",
+          "url": "https://it.cornell.edu/zoom/activate-zoom-account"
+        },
+        {
+          "position": 8,
+          "domain": "vod.video.cornell.edu",
+          "title": "Zoom SSO login - Video on Demand",
+          "url": "https://vod.video.cornell.edu/media/Zoom+SSO+login/1_mn8uzb6b"
+        },
+        {
+          "position": 9,
+          "domain": "www.cornellclubsarasotamanatee.org",
+          "title": "Cornell Club of Sarasota-Manatee - Zoom Help",
+          "url": "https://www.cornellclubsarasotamanatee.org/Zhelp"
+        },
+        {
+          "position": 10,
+          "domain": "tdx.cornell.edu",
+          "title": "Article - Zoom",
+          "url": "https://tdx.cornell.edu/TDClient/58/Portal/KB/Article/1005/Zoom?SIDs=62"
+        }
+      ]
+    },
+    {
+      "keyword": "study planner",
+      "volume": 5400,
+      "cpc": 1.18,
+      "competition": 0.46,
+      "intent": "informational",
+      "kd": 9,
+      "score": 284.2,
+      "serp": [
+        {
+          "position": 1,
+          "domain": "www.notion.com",
+          "title": "Study Planner templates",
+          "url": "https://www.notion.com/templates/category/study-planner?srsltid=AU7gw4VimvekLsXja7UfLMTuhG0w_5sD23FFkjzUkanYbTvUcEpQZOEZ"
+        },
+        {
+          "position": 2,
+          "domain": "mystudylife.com",
+          "title": "MyStudyLife | Free Student Planner, Homework Tracker ...",
+          "url": "https://mystudylife.com/"
+        },
+        {
+          "position": 3,
+          "domain": "shovelapp.io",
+          "title": "Shovel App - Smart Study Planner for Stress-Free Productivity",
+          "url": "https://shovelapp.io/"
+        },
+        {
+          "position": 5,
+          "domain": "www.canva.com",
+          "title": "Free Study Planner: Build Custom Study Schedules with AI",
+          "url": "https://www.canva.com/study-planner/"
+        },
+        {
+          "position": 6,
+          "domain": "www.pinterest.com",
+          "title": "Study Planner",
+          "url": "https://www.pinterest.com/ideas/study-planner/941195692614/"
+        },
+        {
+          "position": 7,
+          "domain": "www.erincondren.com",
+          "title": "Academic Planner | School Agenda",
+          "url": "https://www.erincondren.com/academic-planner?srsltid=AU7gw4XERLvSTtmNwcI7dd9mt3MpP07mkx1MRuLYNfdxH6gDOzYFl6jV"
+        },
+        {
+          "position": 8,
+          "domain": "www.reddit.com",
+          "title": "best study planner? : r/studytips",
+          "url": "https://www.reddit.com/r/studytips/comments/1nslef4/best_study_planner/"
+        },
+        {
+          "position": 9,
+          "domain": "tasksboard.com",
+          "title": "Study Planner: Free Apps and Templates for Student…",
+          "url": "https://tasksboard.com/blog/study-planner-guide"
+        },
+        {
+          "position": 10,
+          "domain": "www.kokuyostore.com",
+          "title": "Study Planner - KOKUYO",
+          "url": "https://www.kokuyostore.com/en_US/stationery/stationery-notebooks/stationery-notebooks-study_planner/?srsltid=AU7gw4Vi-v0G7du03-EfWyXrEUsJh8hePMi_t8p9KU3YtQrHSTgm0zZA"
+        },
+        {
+          "position": 11,
+          "domain": "www.swinburneonline.edu.au",
+          "title": "Study Planner",
+          "url": "https://www.swinburneonline.edu.au/study-planner/"
+        }
+      ]
+    },
+    {
+      "keyword": "how to study",
+      "volume": 9900,
+      "cpc": 8.06,
+      "competition": 0.06,
+      "intent": "informational",
+      "kd": 26,
+      "score": 275,
+      "serp": [
+        {
+          "position": 2,
+          "domain": "lsc.cornell.edu",
+          "title": "How to Study",
+          "url": "https://lsc.cornell.edu/how-to-study/"
+        },
+        {
+          "position": 4,
+          "domain": "www.reddit.com",
+          "title": "How the hell do you actually study? :( Like, I don't ...",
+          "url": "https://www.reddit.com/r/GetStudying/comments/172b10v/how_the_hell_do_you_actually_study_like_i_dont/"
+        },
+        {
+          "position": 6,
+          "domain": "www.how-to-study.com",
+          "title": "Home - How To Study",
+          "url": "https://www.how-to-study.com/"
+        },
+        {
+          "position": 7,
+          "domain": "learningcenter.unc.edu",
+          "title": "Studying 101: Study Smarter Not Harder - UNC Learning Center",
+          "url": "https://learningcenter.unc.edu/tips-and-tools/studying-101-study-smarter-not-harder/"
+        },
+        {
+          "position": 8,
+          "domain": "studentsuccess.illinois.edu",
+          "title": "Study Tips & Strategies",
+          "url": "https://studentsuccess.illinois.edu/student-resources/academic-wellness/study-tips-strategies/"
+        },
+        {
+          "position": 9,
+          "domain": "www.wikihow.com",
+          "title": "13 Ways to Study Smarter, Not Harder (with Expert Tips)",
+          "url": "https://www.wikihow.com/Study"
+        },
+        {
+          "position": 10,
+          "domain": "www.uwlax.edu",
+          "title": "How to study effectively - College Tips",
+          "url": "https://www.uwlax.edu/college-tips/how-to-study-effectively/"
+        },
+        {
+          "position": 11,
+          "domain": "oxfordlearning.com",
+          "title": "Study Tips for Exams—Study Smarter, Not Harder",
+          "url": "https://oxfordlearning.com/study-tips-for-exams-study-smarter-not-harder/"
+        }
+      ]
+    },
+    {
+      "keyword": "cornell club",
+      "volume": 6600,
+      "cpc": 0.35,
+      "competition": 0,
+      "intent": "informational",
+      "kd": 15,
+      "score": 264,
+      "serp": [
+        {
+          "position": 1,
+          "domain": "www.cornellclubnyc.com",
+          "title": "The Cornell Club - New York Home Page",
+          "url": "https://www.cornellclubnyc.com/"
+        },
+        {
+          "position": 3,
+          "domain": "cornell.campusgroups.com",
+          "title": "List Of Groups - Cornell Campus Groups",
+          "url": "https://cornell.campusgroups.com/club_signup"
+        },
+        {
+          "position": 4,
+          "domain": "en.wikipedia.org",
+          "title": "Cornell Club of New York",
+          "url": "https://en.wikipedia.org/wiki/Cornell_Club_of_New_York"
+        },
+        {
+          "position": 5,
+          "domain": "alumni.cornell.edu",
+          "title": "Cornell clubs - Alumni, parents, and friends",
+          "url": "https://alumni.cornell.edu/connect/clubs/"
+        },
+        {
+          "position": 6,
+          "domain": "www.instagram.com",
+          "title": "The Cornell Club-New York (@cornellclubnyc)",
+          "url": "https://www.instagram.com/cornellclubnyc/?hl=en"
+        },
+        {
+          "position": 7,
+          "domain": "www.cornellclubdc.org",
+          "title": "Cornell Club of Washington DC - HOME",
+          "url": "https://www.cornellclubdc.org/"
+        },
+        {
+          "position": 8,
+          "domain": "www.yelp.com",
+          "title": "The Cornell Club Photos",
+          "url": "https://www.yelp.com/biz/the-cornell-club-new-york"
+        }
+      ]
+    },
+    {
+      "keyword": "faculty center cornell",
+      "volume": 2900,
+      "cpc": null,
+      "competition": 0,
+      "intent": "informational",
+      "kd": 1,
+      "score": 263.6,
+      "serp": [
+        {
+          "position": 1,
+          "domain": "registrar.cornell.edu",
+          "title": "Faculty Center and Advisor Center - Cornell registrar",
+          "url": "https://registrar.cornell.edu/faculty-staff/faculty-resources/faculty-center-and-advisor-center"
+        },
+        {
+          "position": 2,
+          "domain": "it.cornell.edu",
+          "title": "Faculty Center and Advisor Center - Cornell University",
+          "url": "https://it.cornell.edu/faculty-center"
+        },
+        {
+          "position": 3,
+          "domain": "provost.cornell.edu",
+          "title": "Faculty Resources - Office of the Provost - Cornell University",
+          "url": "https://provost.cornell.edu/faculty-resources/"
+        },
+        {
+          "position": 4,
+          "domain": "registrar.cornell.edu",
+          "title": "Faculty Resources - Cornell University - Registrar",
+          "url": "https://registrar.cornell.edu/faculty-staff/faculty-resources"
+        },
+        {
+          "position": 5,
+          "domain": "www.facebook.com",
+          "title": "Cornell University Center for Teaching Innovation | Ithaca NY",
+          "url": "https://www.facebook.com/CTICornell/"
+        },
+        {
+          "position": 6,
+          "domain": "aap.cornell.edu",
+          "title": "Academics and Teaching - Cornell AAP",
+          "url": "https://aap.cornell.edu/essentials-for-faculty-and-staff/academics-and-teaching/"
+        },
+        {
+          "position": 7,
+          "domain": "registrar.cornell.edu",
+          "title": "Faculty & Staff - Cornell registrar",
+          "url": "https://registrar.cornell.edu/faculty-staff"
+        },
+        {
+          "position": 8,
+          "domain": "teaching.cornell.edu",
+          "title": "Faculty & Instructors - Center for Teaching Innovation",
+          "url": "https://teaching.cornell.edu/programs/faculty-instructors"
+        },
+        {
+          "position": 9,
+          "domain": "it.cornell.edu",
+          "title": "Login Links - Cornell University",
+          "url": "https://it.cornell.edu/quick-login/login-links"
+        },
+        {
+          "position": 10,
+          "domain": "www.cornellcollege.edu",
+          "title": "Faculty and Staff Portal",
+          "url": "https://www.cornellcollege.edu/faculty-staff/index.shtml"
+        }
+      ]
+    },
+    {
+      "keyword": "flashcards for studying",
+      "volume": 14800,
+      "cpc": 1.73,
+      "competition": 0.02,
+      "intent": "informational",
+      "kd": 47,
+      "score": 259.6,
+      "serp": [
+        {
+          "position": 2,
+          "domain": "www.brainscape.com",
+          "title": "Brainscape: The Best Flashcards App | Make Flashcards Online",
+          "url": "https://www.brainscape.com/"
+        },
+        {
+          "position": 3,
+          "domain": "flashcards.world",
+          "title": "Flashcards World",
+          "url": "https://flashcards.world/"
+        },
+        {
+          "position": 4,
+          "domain": "quizlet.com",
+          "title": "Online Flashcard Maker & Flashcard App",
+          "url": "https://quizlet.com/features/flashcards"
+        },
+        {
+          "position": 6,
+          "domain": "kahoot.com",
+          "title": "AI-Powered Free Online Flashcards for Studying",
+          "url": "https://kahoot.com/kahoot-study/flashcards/"
+        },
+        {
+          "position": 7,
+          "domain": "apps.apple.com",
+          "title": "Quizlet: More than Flashcards - App Store - Apple",
+          "url": "https://apps.apple.com/us/app/quizlet-more-than-flashcards/id546473125"
+        },
+        {
+          "position": 8,
+          "domain": "lsa.umich.edu",
+          "title": "Flashcards: A classic study tool that works for college students ...",
+          "url": "https://lsa.umich.edu/technology-services/news-events/all-news/teaching-tip-of-the-week/flashcards-a-classic-study-tool-that-works-for-college-students-too.html"
+        },
+        {
+          "position": 9,
+          "domain": "www.canva.com",
+          "title": "Free Flashcard Maker: Create Flashcards With AI",
+          "url": "https://www.canva.com/flashcards/"
+        },
+        {
+          "position": 10,
+          "domain": "play.google.com",
+          "title": "Quizlet: More than Flashcards - Apps on Google Play",
+          "url": "https://play.google.com/store/apps/details?id=com.quizlet.quizletandroid&hl=en_US"
+        },
+        {
+          "position": 12,
+          "domain": "www.cram.com",
+          "title": "Cram | Flashcards, Practice Tests and Study Tools",
+          "url": "https://www.cram.com/"
+        }
+      ]
+    }
+  ],
+  "poolSize": 167,
+  "rest": [
+    {
+      "keyword": "independent study",
+      "volume": 4400,
+      "cpc": 11.53,
+      "competition": 0.12,
+      "intent": "informational",
+      "kd": 7,
+      "score": 258.8
+    },
+    {
+      "keyword": "study with me",
+      "volume": 4400,
+      "cpc": 6.42,
+      "competition": 0.01,
+      "intent": "informational",
+      "kd": 8,
+      "score": 244.4
+    },
+    {
+      "keyword": "study break",
+      "volume": 2900,
+      "cpc": 0.26,
+      "competition": 0.4,
+      "intent": "informational",
+      "kd": 2,
+      "score": 241.7
+    },
+    {
+      "keyword": "outline method note taking",
+      "volume": 2900,
+      "cpc": null,
+      "competition": 0.01,
+      "intent": "informational",
+      "kd": 2,
+      "score": 241.7
+    },
+    {
+      "keyword": "course of study meaning",
+      "volume": 2400,
+      "cpc": null,
+      "competition": 0,
+      "intent": "informational",
+      "kd": 0,
+      "score": 240
+    },
+    {
+      "keyword": "study weekly",
+      "volume": 5400,
+      "cpc": 2.02,
+      "competition": 0.06,
+      "intent": "informational",
+      "kd": 14,
+      "score": 225
+    },
+    {
+      "keyword": "cornell academic year",
+      "volume": 12100,
+      "cpc": null,
+      "competition": 0,
+      "intent": "informational",
+      "kd": 49,
+      "score": 205.1
+    },
+    {
+      "keyword": "cornell ithaca",
+      "volume": 12100,
+      "cpc": 3.14,
+      "competition": 0.06,
+      "intent": "informational",
+      "kd": 53,
+      "score": 192.1
+    },
+    {
+      "keyword": "cornell supplemental essays",
+      "volume": 1900,
+      "cpc": null,
+      "competition": 0,
+      "intent": "informational",
+      "kd": 0,
+      "score": 190
+    },
+    {
+      "keyword": "cornell dining",
+      "volume": 5400,
+      "cpc": null,
+      "competition": 0.01,
+      "intent": "informational",
+      "kd": 19,
+      "score": 186.2
+    },
+    {
+      "keyword": "cornell notes example",
+      "volume": 5400,
+      "cpc": 0.12,
+      "competition": 0.1,
+      "intent": "informational",
+      "kd": 19,
+      "score": 186.2
+    },
+    {
+      "keyword": "cornell ilr",
+      "volume": 5400,
+      "cpc": 8.85,
+      "competition": 0,
+      "intent": "informational",
+      "kd": 21,
+      "score": 174.2
+    },
+    {
+      "keyword": "quick study",
+      "volume": 1900,
+      "cpc": 0.27,
+      "competition": 0.07,
+      "intent": "informational",
+      "kd": 1,
+      "score": 172.7
+    },
+    {
+      "keyword": "study methods",
+      "volume": 5400,
+      "cpc": 5.53,
+      "competition": 0.03,
+      "intent": "informational",
+      "kd": 23,
+      "score": 163.6
+    },
+    {
+      "keyword": "person studying",
+      "volume": 1600,
+      "cpc": 0.03,
+      "competition": 0,
+      "intent": "informational",
+      "kd": 0,
+      "score": 160
+    },
+    {
+      "keyword": "word study",
+      "volume": 1600,
+      "cpc": 1.19,
+      "competition": 0.09,
+      "intent": "informational",
+      "kd": 0,
+      "score": 160
+    },
+    {
+      "keyword": "cornell gym",
+      "volume": 1900,
+      "cpc": 0.6,
+      "competition": 0.02,
+      "intent": "informational",
+      "kd": 2,
+      "score": 158.3
+    },
+    {
+      "keyword": "cornell application portal",
+      "volume": 6600,
+      "cpc": 33.45,
+      "competition": 0.02,
+      "intent": "informational",
+      "kd": 32,
+      "score": 157.1
+    },
+    {
+      "keyword": "study homework",
+      "volume": 8100,
+      "cpc": 6.58,
+      "competition": 0.02,
+      "intent": "informational",
+      "kd": 44,
+      "score": 150
+    },
+    {
+      "keyword": "meeting notes",
+      "volume": 3600,
+      "cpc": 15.28,
+      "competition": 0.46,
+      "intent": "informational",
+      "kd": 15,
+      "score": 144
+    },
+    {
+      "keyword": "cornell note taking method",
+      "volume": 6600,
+      "cpc": 0.17,
+      "competition": 0.11,
+      "intent": "informational",
+      "kd": 39,
+      "score": 134.7
+    },
+    {
+      "keyword": "cornell sun",
+      "volume": 6600,
+      "cpc": null,
+      "competition": 0,
+      "intent": "informational",
+      "kd": 40,
+      "score": 132
+    },
+    {
+      "keyword": "study pods",
+      "volume": 1300,
+      "cpc": 6.5,
+      "competition": 1,
+      "intent": "informational",
+      "kd": 0,
+      "score": 130
+    },
+    {
+      "keyword": "someone studying",
+      "volume": 1300,
+      "cpc": null,
+      "competition": 0,
+      "intent": "informational",
+      "kd": 0,
+      "score": 130
+    },
+    {
+      "keyword": "cornell bursar",
+      "volume": 2900,
+      "cpc": null,
+      "competition": 0,
+      "intent": "informational",
+      "kd": 14,
+      "score": 120.8
+    },
+    {
+      "keyword": "cornell cashnet",
+      "volume": 2900,
+      "cpc": null,
+      "competition": 0,
+      "intent": "informational",
+      "kd": 14,
+      "score": 120.8
+    },
+    {
+      "keyword": "cornell campus",
+      "volume": 6600,
+      "cpc": 0.09,
+      "competition": 0.01,
+      "intent": "informational",
+      "kd": 49,
+      "score": 111.9
+    },
+    {
+      "keyword": "cornell engineering",
+      "volume": 3600,
+      "cpc": null,
+      "competition": 0,
+      "intent": "informational",
+      "kd": 23,
+      "score": 109.1
+    },
+    {
+      "keyword": "cornell cals",
+      "volume": 3600,
+      "cpc": 0.32,
+      "competition": 0,
+      "intent": "informational",
+      "kd": 23,
+      "score": 109.1
+    },
+    {
+      "keyword": "cornell admissions",
+      "volume": 3600,
+      "cpc": 9.9,
+      "competition": 0.04,
+      "intent": "informational",
+      "kd": 23,
+      "score": 109.1
+    },
+    {
+      "keyword": "self study",
+      "volume": 1900,
+      "cpc": 20.25,
+      "competition": 0,
+      "intent": "informational",
+      "kd": 8,
+      "score": 105.6
+    },
+    {
+      "keyword": "student studying",
+      "volume": 2900,
+      "cpc": null,
+      "competition": 0,
+      "intent": "informational",
+      "kd": 18,
+      "score": 103.6
+    },
+    {
+      "keyword": "study tools",
+      "volume": 4400,
+      "cpc": 4.24,
+      "competition": 0.27,
+      "intent": "informational",
+      "kd": 33,
+      "score": 102.3
+    },
+    {
+      "keyword": "pomodoro technique for studying",
+      "volume": 5400,
+      "cpc": 1.84,
+      "competition": 0.01,
+      "intent": "informational",
+      "kd": 44,
+      "score": 100
+    },
+    {
+      "keyword": "fe exam prep",
+      "volume": 2900,
+      "cpc": 6.52,
+      "competition": 0.59,
+      "intent": "informational",
+      "kd": 19,
+      "score": 100
+    },
+    {
+      "keyword": "cornell cooperative extension",
+      "volume": 5400,
+      "cpc": 7.29,
+      "competition": 0.01,
+      "intent": "informational",
+      "kd": 46,
+      "score": 96.4
+    },
+    {
+      "keyword": "cornell ranking",
+      "volume": 4400,
+      "cpc": null,
+      "competition": 0,
+      "intent": "informational",
+      "kd": 36,
+      "score": 95.7
+    },
+    {
+      "keyword": "study of language",
+      "volume": 1900,
+      "cpc": null,
+      "competition": 0.01,
+      "intent": "informational",
+      "kd": 10,
+      "score": 95
+    },
+    {
+      "keyword": "study space",
+      "volume": 3600,
+      "cpc": 3.17,
+      "competition": 0.01,
+      "intent": "informational",
+      "kd": 28,
+      "score": 94.7
+    },
+    {
+      "keyword": "study strategies",
+      "volume": 2900,
+      "cpc": 6.2,
+      "competition": 0.04,
+      "intent": "informational",
+      "kd": 21,
+      "score": 93.5
+    },
+    {
+      "keyword": "study of words",
+      "volume": 2900,
+      "cpc": null,
+      "competition": 0,
+      "intent": "informational",
+      "kd": 21,
+      "score": 93.5
+    },
+    {
+      "keyword": "study with ara",
+      "volume": 880,
+      "cpc": null,
+      "competition": 0,
+      "intent": "informational",
+      "kd": 0,
+      "score": 88
+    },
+    {
+      "keyword": "rpi finals schedule",
+      "volume": 880,
+      "cpc": null,
+      "competition": 0,
+      "intent": "informational",
+      "kd": 0,
+      "score": 88
+    },
+    {
+      "keyword": "cornell law",
+      "volume": 5400,
+      "cpc": 17.31,
+      "competition": 0,
+      "intent": "informational",
+      "kd": 53,
+      "score": 85.7
+    },
+    {
+      "keyword": "cornell majors",
+      "volume": 2900,
+      "cpc": 5.75,
+      "competition": 0.01,
+      "intent": "informational",
+      "kd": 24,
+      "score": 85.3
+    },
+    {
+      "keyword": "study skills",
+      "volume": 2900,
+      "cpc": 14.57,
+      "competition": 0.03,
+      "intent": "informational",
+      "kd": 26,
+      "score": 80.6
+    },
+    {
+      "keyword": "best way to study",
+      "volume": 2400,
+      "cpc": 4.25,
+      "competition": 0.1,
+      "intent": "commercial",
+      "kd": 20,
+      "score": 80
+    },
+    {
+      "keyword": "cornell transfer",
+      "volume": 1000,
+      "cpc": 15.05,
+      "competition": 0.02,
+      "intent": "informational",
+      "kd": 3,
+      "score": 76.9
+    },
+    {
+      "keyword": "best study methods",
+      "volume": 2400,
+      "cpc": 11.12,
+      "competition": 0.06,
+      "intent": "commercial",
+      "kd": 22,
+      "score": 75
+    },
+    {
+      "keyword": "active recall study method",
+      "volume": 2400,
+      "cpc": 3.22,
+      "competition": 0.01,
+      "intent": "informational",
+      "kd": 23,
+      "score": 72.7
+    },
+    {
+      "keyword": "free quizlet",
+      "volume": 2400,
+      "cpc": 3.04,
+      "competition": 0.09,
+      "intent": "informational",
+      "kd": 28,
+      "score": 63.2
+    },
+    {
+      "keyword": "best way to study for exams",
+      "volume": 2900,
+      "cpc": 3.99,
+      "competition": 0.17,
+      "intent": "commercial",
+      "kd": 36,
+      "score": 63
+    },
+    {
+      "keyword": "notion note taking",
+      "volume": 2900,
+      "cpc": 7.24,
+      "competition": 0.26,
+      "intent": "informational",
+      "kd": 37,
+      "score": 61.7
+    },
+    {
+      "keyword": "notion for students",
+      "volume": 1600,
+      "cpc": 10.03,
+      "competition": 0.01,
+      "intent": "informational",
+      "kd": 16,
+      "score": 61.5
+    },
+    {
+      "keyword": "latex note taking",
+      "volume": 720,
+      "cpc": null,
+      "competition": 0,
+      "intent": "informational",
+      "kd": 2,
+      "score": 60
+    },
+    {
+      "keyword": "mapping note taking method",
+      "volume": 590,
+      "cpc": 21.72,
+      "competition": 0.02,
+      "intent": "informational",
+      "kd": 0,
+      "score": 59
+    },
+    {
+      "keyword": "focused note-taking",
+      "volume": 590,
+      "cpc": null,
+      "competition": 0,
+      "intent": "informational",
+      "kd": 0,
+      "score": 59
+    },
+    {
+      "keyword": "final exam study plan",
+      "volume": 590,
+      "cpc": null,
+      "competition": 0,
+      "intent": "informational",
+      "kd": 0,
+      "score": 59
+    },
+    {
+      "keyword": "cornell mba",
+      "volume": 1600,
+      "cpc": 19.22,
+      "competition": 0.31,
+      "intent": "informational",
+      "kd": 18,
+      "score": 57.1
+    },
+    {
+      "keyword": "cornell portal",
+      "volume": 2400,
+      "cpc": null,
+      "competition": 0,
+      "intent": "informational",
+      "kd": 35,
+      "score": 53.3
+    },
+    {
+      "keyword": "memorization techniques",
+      "volume": 1900,
+      "cpc": 5.15,
+      "competition": 0.03,
+      "intent": "informational",
+      "kd": 27,
+      "score": 51.4
+    },
+    {
+      "keyword": "cornell style notes",
+      "volume": 1900,
+      "cpc": 0.12,
+      "competition": 0.15,
+      "intent": "informational",
+      "kd": 27,
+      "score": 51.4
+    },
+    {
+      "keyword": "study habits",
+      "volume": 2400,
+      "cpc": 9.92,
+      "competition": 0.03,
+      "intent": "informational",
+      "kd": 38,
+      "score": 50
+    },
+    {
+      "keyword": "plan of study",
+      "volume": 480,
+      "cpc": 6.43,
+      "competition": 0,
+      "intent": "informational",
+      "kd": 0,
+      "score": 48
+    },
+    {
+      "keyword": "study smart",
+      "volume": 1300,
+      "cpc": 9.53,
+      "competition": 0.06,
+      "intent": "informational",
+      "kd": 18,
+      "score": 46.4
+    },
+    {
+      "keyword": "active learning techniques",
+      "volume": 1600,
+      "cpc": 6.21,
+      "competition": 0.01,
+      "intent": "informational",
+      "kd": 25,
+      "score": 45.7
+    },
+    {
+      "keyword": "pomodoro study method",
+      "volume": 2400,
+      "cpc": 2.84,
+      "competition": 0.03,
+      "intent": "informational",
+      "kd": 43,
+      "score": 45.3
+    },
+    {
+      "keyword": "study together",
+      "volume": 880,
+      "cpc": 7.74,
+      "competition": 0.02,
+      "intent": "informational",
+      "kd": 10,
+      "score": 44
+    },
+    {
+      "keyword": "active learning methods",
+      "volume": 1600,
+      "cpc": 6.21,
+      "competition": 0.01,
+      "intent": "informational",
+      "kd": 27,
+      "score": 43.2
+    },
+    {
+      "keyword": "240 tutoring study guides",
+      "volume": 720,
+      "cpc": 0.51,
+      "competition": 0.18,
+      "intent": "informational",
+      "kd": 7,
+      "score": 42.4
+    },
+    {
+      "keyword": "study tracker",
+      "volume": 590,
+      "cpc": 4.35,
+      "competition": 0.04,
+      "intent": "informational",
+      "kd": 4,
+      "score": 42.1
+    },
+    {
+      "keyword": "sda lesson study",
+      "volume": 1300,
+      "cpc": null,
+      "competition": 0,
+      "intent": "informational",
+      "kd": 23,
+      "score": 39.4
+    },
+    {
+      "keyword": "study agent",
+      "volume": 590,
+      "cpc": 5.07,
+      "competition": 0.16,
+      "intent": "informational",
+      "kd": 5,
+      "score": 39.3
+    },
+    {
+      "keyword": "active learning techniques for students",
+      "volume": 1300,
+      "cpc": null,
+      "competition": 0,
+      "intent": "informational",
+      "kd": 25,
+      "score": 37.1
+    },
+    {
+      "keyword": "study schedule template",
+      "volume": 480,
+      "cpc": 1.75,
+      "competition": 0.32,
+      "intent": "informational",
+      "kd": 3,
+      "score": 36.9
+    },
+    {
+      "keyword": "home study",
+      "volume": 1300,
+      "cpc": 12.38,
+      "competition": 0.04,
+      "intent": "informational",
+      "kd": 26,
+      "score": 36.1
+    },
+    {
+      "keyword": "download anki",
+      "volume": 1900,
+      "cpc": 1.11,
+      "competition": 0,
+      "intent": "informational",
+      "kd": 44,
+      "score": 35.2
+    },
+    {
+      "keyword": "note summarizer",
+      "volume": 1300,
+      "cpc": 5.86,
+      "competition": 0.48,
+      "intent": "informational",
+      "kd": 27,
+      "score": 35.1
+    },
+    {
+      "keyword": "how to take cornell notes",
+      "volume": 1300,
+      "cpc": 0.08,
+      "competition": 0.01,
+      "intent": "informational",
+      "kd": 27,
+      "score": 35.1
+    },
+    {
+      "keyword": "active recall study tips",
+      "volume": 1300,
+      "cpc": null,
+      "competition": 0,
+      "intent": "informational",
+      "kd": 30,
+      "score": 32.5
+    },
+    {
+      "keyword": "active recall study technique",
+      "volume": 1300,
+      "cpc": null,
+      "competition": 0,
+      "intent": "informational",
+      "kd": 30,
+      "score": 32.5
+    },
+    {
+      "keyword": "studying while high",
+      "volume": 320,
+      "cpc": null,
+      "competition": 0,
+      "intent": "informational",
+      "kd": 0,
+      "score": 32
+    },
+    {
+      "keyword": "study for exams",
+      "volume": 1000,
+      "cpc": 5.58,
+      "competition": 0.03,
+      "intent": "informational",
+      "kd": 22,
+      "score": 31.3
+    },
+    {
+      "keyword": "cornell course catalog",
+      "volume": 1000,
+      "cpc": null,
+      "competition": 0,
+      "intent": "informational",
+      "kd": 22,
+      "score": 31.3
+    },
+    {
+      "keyword": "study tips for final exams",
+      "volume": 480,
+      "cpc": 3.35,
+      "competition": 0.04,
+      "intent": "informational",
+      "kd": 6,
+      "score": 30
+    },
+    {
+      "keyword": "avid note taking",
+      "volume": 260,
+      "cpc": null,
+      "competition": 0.01,
+      "intent": "informational",
+      "kd": 0,
+      "score": 26
+    },
+    {
+      "keyword": "minimal note taking",
+      "volume": 390,
+      "cpc": null,
+      "competition": 0,
+      "intent": "informational",
+      "kd": 5,
+      "score": 26
+    },
+    {
+      "keyword": "ucsc finals schedule",
+      "volume": 1000,
+      "cpc": null,
+      "competition": 0,
+      "intent": "informational",
+      "kd": 29,
+      "score": 25.6
+    },
+    {
+      "keyword": "cornell note-taking system",
+      "volume": 1300,
+      "cpc": 0.23,
+      "competition": 0.05,
+      "intent": "informational",
+      "kd": 43,
+      "score": 24.5
+    },
+    {
+      "keyword": "effective study methods",
+      "volume": 720,
+      "cpc": 3.35,
+      "competition": 0.06,
+      "intent": "informational",
+      "kd": 20,
+      "score": 24
+    },
+    {
+      "keyword": "study focus",
+      "volume": 720,
+      "cpc": 3.82,
+      "competition": 0.05,
+      "intent": "informational",
+      "kd": 20,
+      "score": 24
+    },
+    {
+      "keyword": "active study techniques",
+      "volume": 390,
+      "cpc": 15.42,
+      "competition": 0.02,
+      "intent": "informational",
+      "kd": 7,
+      "score": 22.9
+    },
+    {
+      "keyword": "study x",
+      "volume": 1300,
+      "cpc": 3.77,
+      "competition": 0.05,
+      "intent": "informational",
+      "kd": 51,
+      "score": 21.3
+    },
+    {
+      "keyword": "types of note taking",
+      "volume": 880,
+      "cpc": 2.08,
+      "competition": 0.01,
+      "intent": "informational",
+      "kd": 32,
+      "score": 21
+    },
+    {
+      "keyword": "how to study fast",
+      "volume": 390,
+      "cpc": 25.65,
+      "competition": 0.06,
+      "intent": "informational",
+      "kd": 10,
+      "score": 19.5
+    },
+    {
+      "keyword": "most effective study methods",
+      "volume": 590,
+      "cpc": 10.17,
+      "competition": 0.04,
+      "intent": "informational",
+      "kd": 21,
+      "score": 19
+    },
+    {
+      "keyword": "cornell cds",
+      "volume": 590,
+      "cpc": null,
+      "competition": 0,
+      "intent": "informational",
+      "kd": 21,
+      "score": 19
+    },
+    {
+      "keyword": "note taking styles",
+      "volume": 880,
+      "cpc": 4.62,
+      "competition": 0.01,
+      "intent": "informational",
+      "kd": 39,
+      "score": 18
+    },
+    {
+      "keyword": "the outline method note taking",
+      "volume": 210,
+      "cpc": null,
+      "competition": 0.01,
+      "intent": "informational",
+      "kd": 2,
+      "score": 17.5
+    },
+    {
+      "keyword": "the outline note taking method",
+      "volume": 210,
+      "cpc": null,
+      "competition": 0.01,
+      "intent": "informational",
+      "kd": 2,
+      "score": 17.5
+    },
+    {
+      "keyword": "the outline method of note taking",
+      "volume": 210,
+      "cpc": null,
+      "competition": 0.01,
+      "intent": "informational",
+      "kd": 2,
+      "score": 17.5
+    },
+    {
+      "keyword": "note taking abbreviations",
+      "volume": 170,
+      "cpc": null,
+      "competition": 0,
+      "intent": "informational",
+      "kd": 0,
+      "score": 17
+    },
+    {
+      "keyword": "abbreviations note taking",
+      "volume": 170,
+      "cpc": null,
+      "competition": 0,
+      "intent": "informational",
+      "kd": 0,
+      "score": 17
+    },
+    {
+      "keyword": "active studying techniques",
+      "volume": 390,
+      "cpc": 15.42,
+      "competition": 0.02,
+      "intent": "informational",
+      "kd": 14,
+      "score": 16.3
+    },
+    {
+      "keyword": "note taking or note-taking",
+      "volume": 390,
+      "cpc": null,
+      "competition": 0,
+      "intent": "informational",
+      "kd": 14,
+      "score": 16.3
+    },
+    {
+      "keyword": "note taking or note taking",
+      "volume": 390,
+      "cpc": null,
+      "competition": 0,
+      "intent": "informational",
+      "kd": 14,
+      "score": 16.3
+    },
+    {
+      "keyword": "different study methods",
+      "volume": 720,
+      "cpc": 6.62,
+      "competition": 0.03,
+      "intent": "informational",
+      "kd": 38,
+      "score": 15
+    },
+    {
+      "keyword": "the study hours",
+      "volume": 210,
+      "cpc": null,
+      "competition": 0,
+      "intent": "informational",
+      "kd": 4,
+      "score": 15
+    },
+    {
+      "keyword": "different note taking methods",
+      "volume": 720,
+      "cpc": 4.23,
+      "competition": 0.01,
+      "intent": "informational",
+      "kd": 39,
+      "score": 14.7
+    },
+    {
+      "keyword": "note taking techniques",
+      "volume": 720,
+      "cpc": 3.34,
+      "competition": 0.03,
+      "intent": "informational",
+      "kd": 39,
+      "score": 14.7
+    },
+    {
+      "keyword": "active studying",
+      "volume": 320,
+      "cpc": 5.78,
+      "competition": 0.08,
+      "intent": "informational",
+      "kd": 12,
+      "score": 14.5
+    },
+    {
+      "keyword": "outline note taking",
+      "volume": 390,
+      "cpc": null,
+      "competition": 0.02,
+      "intent": "informational",
+      "kd": 18,
+      "score": 13.9
+    },
+    {
+      "keyword": "best study tips",
+      "volume": 390,
+      "cpc": 1.38,
+      "competition": 0.08,
+      "intent": "commercial",
+      "kd": 19,
+      "score": 13.4
+    },
+    {
+      "keyword": "what is the cornell method of note taking",
+      "volume": 390,
+      "cpc": 0.12,
+      "competition": 0.02,
+      "intent": "informational",
+      "kd": 19,
+      "score": 13.4
+    },
+    {
+      "keyword": "titans: learning to memorize at test time",
+      "volume": 260,
+      "cpc": null,
+      "competition": 0,
+      "intent": "informational",
+      "kd": 11,
+      "score": 12.4
+    },
+    {
+      "keyword": "active study methods",
+      "volume": 210,
+      "cpc": null,
+      "competition": 0.02,
+      "intent": "informational",
+      "kd": 7,
+      "score": 12.4
+    },
+    {
+      "keyword": "how to study effectively for exams",
+      "volume": 390,
+      "cpc": 2.6,
+      "competition": 0.07,
+      "intent": "informational",
+      "kd": 22,
+      "score": 12.2
+    },
+    {
+      "keyword": "spaced repetition for learning",
+      "volume": 480,
+      "cpc": null,
+      "competition": 0,
+      "intent": "informational",
+      "kd": 30,
+      "score": 12
+    },
+    {
+      "keyword": "best note taking method",
+      "volume": 590,
+      "cpc": 2.72,
+      "competition": 0.06,
+      "intent": "commercial",
+      "kd": 39,
+      "score": 12
+    },
+    {
+      "keyword": "note taking ideas",
+      "volume": 480,
+      "cpc": 1.21,
+      "competition": 0.03,
+      "intent": "informational",
+      "kd": 35,
+      "score": 10.7
+    }
+  ]
+}

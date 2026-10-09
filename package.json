@@ -10,12 +10,13 @@
     "db:generate": "drizzle-kit generate",
     "db:migrate": "drizzle-kit migrate",
     "db:studio": "drizzle-kit studio",
-    "test": "vitest run"
+    "test": "vitest run",
+    "research:studycamp": "tsx --conditions=react-server scripts/studycamp-research.ts",
+    "research:shortlist": "tsx --conditions=react-server scripts/studycamp-shortlist.ts"
   },
   "dependencies": {
     "@ai-sdk/openai": "^4.0.57",
     "ai": "^7.0.91",
-    "better-auth": "^1.7.2",
     "cheerio": "^1.2.0",
     "drizzle-orm": "^0.45.2",
     "next": "16.3.4",

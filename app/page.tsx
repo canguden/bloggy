@@ -11,20 +11,16 @@ import {
   FiRefreshCw,
   FiTrendingUp,
 } from "react-icons/fi";
-import { getSession } from "@/lib/auth/session";
 import { Button } from "@/components/ui/button";
 import { ProgressBar } from "@/components/ui/progress-bar";
 import { LandingNav } from "@/components/landing/landing-nav";
 import { HeroUrlForm } from "@/components/landing/hero-url-form";
 import { Logo } from "@/components/ui/logo";
 
-export default async function LandingPage() {
-  const session = await getSession();
-  const hasSession = Boolean(session);
-
+export default function LandingPage() {
   return (
     <div className="flex flex-1 flex-col">
-      <LandingNav hasSession={hasSession} />
+      <LandingNav />
 
       <main className="flex flex-1 flex-col">
         <section className="pt-32 pb-20 sm:pt-40">
@@ -44,8 +40,7 @@ export default async function LandingPage() {
               search demand, and tells you exactly what to write next.
             </p>
 
-            <HeroUrlForm hasSession={hasSession} />
-            {!hasSession && <p className="mt-2 text-[12.5px] text-ink-3">No credit card — just your URL.</p>}
+            <HeroUrlForm />
 
             <div className="mt-8 flex flex-wrap gap-2">
               <CredChip icon={<FiDatabase size={12} />} label="Live DataForSEO data" />
@@ -136,9 +131,9 @@ export default async function LandingPage() {
               </span>{" "}
               next.
             </h2>
-            <Link href={hasSession ? "/app" : "/signup"} className="mt-7">
+            <Link href="/app" className="mt-7">
               <Button variant="secondary" size="lg" className="border-white/25 bg-transparent text-ink-inv hover:bg-white/10">
-                {hasSession ? "Go to dashboard" : "Analyze your website"}
+                Open dashboard
               </Button>
             </Link>
           </div>
@@ -149,11 +144,8 @@ export default async function LandingPage() {
         <div className="mx-auto flex max-w-3xl flex-col items-center gap-4 px-6 sm:flex-row sm:justify-between sm:px-10">
           <Logo size={18} className="text-ink" />
           <nav className="flex items-center gap-6">
-            <Link href="/login" className="text-[13px] font-medium text-ink-2 hover:text-ink">
-              Sign in
-            </Link>
-            <Link href="/signup" className="text-[13px] font-medium text-ink-2 hover:text-ink">
-              Sign up
+            <Link href="/app" className="text-[13px] font-medium text-ink-2 hover:text-ink">
+              Dashboard
             </Link>
           </nav>
           <span className="mono text-[12px] text-ink-3">© {new Date().getFullYear()} Bloggy</span>

@@ -1,10 +1,9 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { FiLogOut, FiChevronDown, FiSettings } from "react-icons/fi";
+import { FiChevronDown, FiSettings } from "react-icons/fi";
 import { DropdownMenu, DropdownItem } from "@/components/ui/dropdown-menu";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
-import { signOut } from "@/lib/auth/auth-client";
 
 export function UserMenu({
   name,
@@ -16,12 +15,6 @@ export function UserMenu({
   compact?: boolean;
 }) {
   const router = useRouter();
-
-  async function handleSignOut() {
-    await signOut();
-    router.push("/login");
-    router.refresh();
-  }
 
   const initial = name.charAt(0).toUpperCase() || "?";
 
@@ -73,10 +66,6 @@ export function UserMenu({
             <span className="text-[13px] text-ink-2">Theme</span>
             <ThemeToggle />
           </div>
-          <div className="my-1 h-px bg-line" />
-          <DropdownItem icon={<FiLogOut size={14} />} onClick={handleSignOut}>
-            Sign out
-          </DropdownItem>
         </>
       )}
     </DropdownMenu>
